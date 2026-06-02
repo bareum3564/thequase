@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pause — Complete Brand Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1a18;--ink2:#3a3a35;--ink3:#6a6a62;--ink4:#9a9a90;
+  --bg:#fafaf7;--bg2:#f4f1ea;--bg3:#ede8dc;
+  --gold:#b8965a;--gold2:#8a6e3e;--gold3:#e8d8b8;--gold4:rgba(184,150,90,0.1);
+  --sage:#6b7c6e;--sage2:#e2ece4;
+  --rose:#c4573a;--rose2:rgba(196,87,58,0.1);
+  --border:rgba(26,26,24,0.1);--borderg:rgba(184,150,90,0.25);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.75;font-weight:300;}
+.sidenav{position:fixed;left:0;top:0;height:100vh;width:48px;background:white;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;padding:18px 0;gap:2px;z-index:100;box-shadow:1px 0 6px rgba(0,0,0,.04);}
+.nav-logo{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--gold);margin-bottom:12px;writing-mode:vertical-rl;transform:rotate(180deg);}
+.sidenav a{writing-mode:vertical-rl;transform:rotate(180deg);font-size:7.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink4);text-decoration:none;padding:8px 4px;transition:color .2s;}
+.sidenav a:hover{color:var(--gold);}
+.doc{margin-left:48px;}
+.cover{min-height:100vh;background:var(--ink);color:white;display:flex;flex-direction:column;justify-content:center;padding:0 76px;position:relative;overflow:hidden;}
+.cover-bg{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:340px;font-weight:600;font-style:italic;color:rgba(255,255,255,.025);line-height:1;pointer-events:none;white-space:nowrap;}
+.eyebrow{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;display:flex;align-items:center;gap:12px;}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);}
+.cover h1{font-family:'Playfair Display',serif;font-size:92px;font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:28px;}
+.cover h1 .the{font-style:italic;color:var(--gold);font-size:68px;}
+.cover h1 .pause{display:block;}
+.cdash{width:52px;height:1px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:26px;}
+.cover-copy{font-size:18px;font-weight:200;color:rgba(255,255,255,.5);max-width:440px;line-height:1.65;margin-bottom:52px;font-style:italic;font-family:'Playfair Display',serif;}
+.cover-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;border-top:1px solid rgba(255,255,255,.1);padding-top:28px;max-width:600px;}
+.cm label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-bottom:4px;}
+.cm span{font-size:13px;color:rgba(255,255,255,.7);font-weight:300;}
+.chap{display:flex;align-items:center;gap:18px;padding:52px 76px 0;margin-bottom:38px;}
+.chap-n{font-family:'Playfair Display',serif;font-size:11px;font-style:italic;color:var(--gold);flex-shrink:0;}
+.chap-line{flex:1;height:1px;background:linear-gradient(to right,var(--borderg),transparent);}
+.chap-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink4);flex-shrink:0;}
+.sec{padding:0 76px 68px;border-bottom:1px solid var(--border);}
+.sec-title{font-family:'Playfair Display',serif;font-size:38px;font-weight:300;line-height:1.1;margin-bottom:6px;}
+.sec-title em{font-style:italic;color:var(--gold);}
+.sec-sub{font-size:12px;color:var(--ink4);margin-bottom:44px;letter-spacing:.04em;}
+.lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
+.bt{font-size:13px;color:var(--ink3);line-height:1.8;font-weight:300;}
+.bt strong{color:var(--ink);font-weight:500;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;}
+.g2b{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.g3b{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.g4b{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+.cell{background:var(--bg);padding:28px 32px;}
+.cw{background:white;padding:28px 32px;}
+.card{background:white;border:1px solid var(--border);padding:22px 26px;}
+.card-g{background:linear-gradient(135deg,#fdf9f2,#f5ead6);border:1px solid var(--borderg);padding:22px 26px;}
+.pull{background:var(--gold4);border-left:3px solid var(--gold);padding:24px 32px;margin:28px 0;}
+.pull p{font-family:'Playfair Display',serif;font-size:19px;font-weight:300;font-style:italic;line-height:1.55;color:var(--ink2);}
+.pull cite{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-top:8px;font-style:normal;}
+.manifesto{background:var(--ink);color:white;padding:72px 80px;text-align:center;}
+.man-lbl{font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:44px;}
+.man-big{font-family:'Playfair Display',serif;font-size:28px;font-weight:300;line-height:1.5;margin-bottom:8px;}
+.man-big em{font-style:italic;color:var(--gold);}
+.man-sep{width:22px;height:1px;background:var(--gold);margin:24px auto;opacity:.4;}
+.man-small{font-size:13px;font-weight:200;color:rgba(255,255,255,.45);line-height:1.9;}
+.tbl{width:100%;border-collapse:collapse;}
+.tbl th{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;text-align:left;padding:0 0 10px;border-bottom:2px solid var(--borderg);padding-right:16px;}
+.tbl td{padding:12px 16px 12px 0;border-bottom:1px solid var(--border);font-size:12.5px;font-weight:300;color:var(--ink3);vertical-align:top;}
+.tbl td:first-child{color:var(--ink);font-weight:500;}
+.tbl tr:last-child td{border-bottom:none;}
+.mem-tier{background:white;border:1px solid var(--border);padding:24px 20px;display:flex;flex-direction:column;}
+.mem-tier.ft{background:linear-gradient(135deg,#fdf9f2,#f5ead5);border:1px solid var(--borderg);}
+.mem-badge{font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--borderg);color:var(--gold);display:inline-block;margin-bottom:14px;width:fit-content;}
+.mem-badge.rc{background:var(--gold);color:white;border-color:var(--gold);}
+.mem-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;}
+.mem-sub{font-size:10px;color:var(--ink4);margin-bottom:16px;}
+.mem-price{font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:2px;}
+.mem-price span{font-size:11px;color:var(--ink4);font-family:'DM Sans',sans-serif;}
+.mem-cycle{font-size:10px;color:var(--ink4);margin-bottom:16px;}
+.mem-sess{background:var(--bg2);padding:12px;margin-bottom:14px;}
+.mem-sess-n{font-family:'Playfair Display',serif;font-size:26px;font-weight:300;color:var(--ink);line-height:1;}
+.mem-sess-l{font-size:10px;color:var(--ink4);margin-top:2px;}
+.perk{display:flex;gap:7px;font-size:11px;color:var(--ink3);margin-bottom:6px;line-height:1.5;}
+.perk .dot{color:var(--gold);flex-shrink:0;}
+.perk.dim{opacity:.28;}
+.mem-cta{padding:10px;text-align:center;border:1px solid var(--borderg);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:auto;}
+.mem-tier.ft .mem-cta{background:var(--gold);color:white;border-color:var(--gold);}
+.persona{background:white;border:1px solid var(--border);padding:24px;}
+.persona.pri{background:linear-gradient(135deg,#fdf9f2,#f5ead6);border-color:var(--borderg);}
+.per-badge{font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--borderg);color:var(--gold);display:inline-block;margin-bottom:12px;}
+.per-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:300;color:var(--ink);margin-bottom:2px;}
+.per-desc{font-size:11px;color:var(--ink4);margin-bottom:14px;}
+.per-tag{display:inline-block;font-size:9px;padding:2px 7px;background:var(--bg2);border:1px solid var(--border);color:var(--ink3);margin:2px;}
+.per-l{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);display:block;margin:12px 0 5px;}
+.per-item{display:flex;gap:7px;font-size:11.5px;color:var(--ink3);margin-bottom:4px;}
+.neg{color:var(--rose);}
+.pos{color:var(--sage);}
+.arc{display:flex;position:relative;margin:28px 0;}
+.arc::before{content:'';position:absolute;top:15px;left:18px;right:18px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.arc-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;}
+.arc-dot{width:10px;height:10px;border-radius:50%;background:white;border:1px solid var(--gold);margin-bottom:12px;position:relative;z-index:1;flex-shrink:0;}
+.arc-dot.on{background:var(--gold);}
+.arc-n{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.arc-name{font-family:'Playfair Display',serif;font-size:13px;font-weight:300;color:var(--ink);margin-bottom:3px;}
+.arc-desc{font-size:10px;color:var(--ink4);line-height:1.5;}
+.comp-card{background:white;border:1px solid var(--border);padding:20px;}
+.comp-card.us{background:linear-gradient(135deg,#fdf9f2,#f5ead6);border-left:3px solid var(--gold);}
+.comp-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:300;color:var(--ink);margin-bottom:2px;}
+.comp-type{font-size:9px;color:var(--ink4);margin-bottom:12px;}
+.comp-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:10.5px;}
+.comp-row:last-child{border-bottom:none;}
+.comp-row .attr{color:var(--ink4);}
+.comp-row .good{color:var(--sage);font-weight:500;}
+.comp-row .mid{color:var(--gold);}
+.comp-row .weak{color:var(--rose);}
+.funnel-step{display:flex;align-items:center;gap:0;margin-bottom:1px;}
+.funnel-stage{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);width:130px;flex-shrink:0;padding-right:14px;}
+.funnel-bar{height:44px;display:flex;align-items:center;padding:0 18px;background:linear-gradient(to right,var(--bg2),var(--bg3));}
+.funnel-bar.top{background:linear-gradient(to right,var(--gold3),var(--gold3));}
+.funnel-label{font-size:12px;color:var(--ink2);}
+.funnel-num{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);margin-left:auto;font-weight:300;}
+.score-bar{margin-bottom:10px;}
+.sc-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;}
+.sc-label span:first-child{color:var(--ink4);}
+.sc-track{height:4px;background:var(--bg3);}
+.sc-fill{height:100%;}
+.kpi-card{background:white;border:1px solid var(--border);border-top:2px solid var(--gold);padding:16px 18px;}
+.kpi-card.a{border-top-color:var(--sage);}
+.kpi-card.r{border-top-color:var(--rose);}
+.kpi-n{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:5px;}
+.kpi-v{font-family:'Playfair Display',serif;font-size:24px;font-weight:300;color:var(--ink);line-height:1;margin-bottom:2px;}
+.kpi-d{font-size:10px;color:var(--ink4);}
+.div-line{display:flex;align-items:center;gap:12px;margin:24px 0;color:var(--ink4);font-size:9px;letter-spacing:.14em;text-transform:uppercase;}
+.div-line::before,.div-line::after{content:'';flex:1;height:1px;background:var(--border);}
+.rev-bar{margin-bottom:12px;}
+.rev-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;color:var(--ink3);}
+.rev-label span:last-child{color:var(--gold);}
+.rev-track{height:4px;background:var(--bg3);}
+.rev-fill{height:100%;background:linear-gradient(to right,var(--gold2),var(--gold));}
+.al{display:flex;flex-direction:column;gap:7px;}
+.al-item{display:flex;gap:9px;font-size:12.5px;color:var(--ink3);}
+.al-item .ar{color:var(--gold);flex-shrink:0;}
+.day-col{background:white;border:1px solid var(--border);}
+.day-head{padding:10px;background:var(--bg2);border-bottom:1px solid var(--border);}
+.day-name{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+.day-theme{font-size:9px;color:var(--ink4);margin-top:1px;}
+.pp{padding:6px 8px;margin:5px;border-radius:1px;font-size:9.5px;line-height:1.4;}
+.pp .plat{font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px;}
+.pp-ig{background:rgba(184,150,90,.08);border:1px solid rgba(184,150,90,.2);color:var(--gold2);}
+.pp-tk{background:var(--sage2);border:1px solid rgba(107,124,110,.2);color:var(--sage);}
+.pp-sp{background:var(--bg2);border:1px solid var(--border);color:var(--ink4);}
+.cal-hd{display:grid;grid-template-columns:repeat(7,1fr);background:var(--bg2);border:1px solid var(--border);border-bottom:none;}
+.cal-hd div{padding:9px;text-align:center;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink4);border-right:1px solid var(--border);}
+.cal-hd div:last-child{border-right:none;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--border);}
+.cal-day{min-height:82px;background:white;border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:7px;display:flex;flex-direction:column;}
+.cal-day:nth-child(7n){border-right:none;}
+.cal-day.empty{background:var(--bg2);}
+.cal-day.hl{background:rgba(184,150,90,.06);border:1px solid var(--borderg);}
+.cal-day.launch{background:rgba(184,150,90,.07);}
+.cal-n{font-size:10px;color:var(--ink4);margin-bottom:3px;}
+.cal-day.hl .cal-n,.cal-day.launch .cal-n{color:var(--gold);font-weight:500;}
+.cal-evt{font-size:8.5px;padding:2px 4px;margin-bottom:2px;border-radius:1px;line-height:1.3;}
+.evt-ig{background:rgba(184,150,90,.1);color:var(--gold2);}
+.evt-tk{background:var(--sage2);color:var(--sage);}
+.evt-pr{background:rgba(196,87,58,.08);color:var(--rose);}
+.evt-sp{background:var(--bg3);color:var(--ink3);}
+.hash-tag{display:inline-block;font-size:11px;padding:3px 9px;background:var(--bg2);border:1px solid var(--border);color:var(--ink3);margin:2px;}
+.svc-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.svc-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:300;color:var(--ink);margin-bottom:3px;}
+.svc-eng{font-size:10px;color:var(--ink4);margin-bottom:14px;}
+.svc-line{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--gold);margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.couple-card{background:white;border:1px solid var(--border);padding:24px;border-top:3px solid var(--rose);}
+.couple-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:var(--ink);margin-bottom:3px;}
+.couple-eng{font-size:10px;color:var(--ink4);margin-bottom:12px;}
+.couple-line{font-family:'Playfair Display',serif;font-size:12px;font-style:italic;color:var(--rose);margin-top:12px;padding-top:10px;border-top:1px solid var(--border);}
+.couple-price{font-family:'Playfair Display',serif;font-size:24px;font-weight:300;color:var(--rose);margin-top:10px;}
+.couple-price span{font-size:11px;font-family:'DM Sans',sans-serif;color:var(--ink4);}
+.logo-option{background:white;border:1px solid var(--border);padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+.logo-preview{height:110px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;width:100%;}
+.logo-badge{font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--borderg);color:var(--gold);margin-bottom:8px;}
+.logo-badge.rec{background:var(--gold);color:white;border-color:var(--gold);}
+.logo-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:300;color:var(--ink);margin-bottom:5px;}
+.logo-desc{font-size:11px;color:var(--ink4);line-height:1.6;}
+.copy-showcase{background:var(--ink);color:white;padding:28px 36px;margin-bottom:10px;}
+.copy-ctx{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:8px;}
+.copy-line{font-family:'Playfair Display',serif;font-size:18px;font-weight:300;font-style:italic;line-height:1.5;color:white;}
+.copy-line em{color:var(--gold);}
+.copy-line small{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:300;font-style:normal;color:rgba(255,255,255,.35);display:block;margin-top:5px;}
+.price-tbl{width:100%;border-collapse:collapse;}
+.price-tbl th{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:400;text-align:left;padding:8px 10px;background:var(--bg2);border:1px solid var(--border);}
+.price-tbl td{padding:10px;border:1px solid var(--border);font-size:12.5px;color:var(--ink3);vertical-align:top;}
+.price-tbl td:first-child{color:var(--ink);font-weight:500;}
+.price-tbl .hl-row td{background:rgba(184,150,90,.04);}
+.price-val{font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);font-weight:300;}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--border);border:1px solid var(--border);}
+.toc-item{background:var(--bg);display:flex;gap:14px;padding:12px 18px;border-bottom:1px solid var(--border);align-items:flex-start;}
+.toc-num{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--gold);width:18px;flex-shrink:0;}
+.toc-name{font-size:13px;color:var(--ink);}
+.toc-sub{font-size:10px;color:var(--ink4);margin-top:1px;}
+.toc-new{margin-left:auto;font-size:8px;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:white;padding:2px 6px;flex-shrink:0;}
+.diff-row{display:flex;border-bottom:1px solid var(--border);}
+.diff-row:first-child{background:var(--bg2);border-bottom:2px solid var(--borderg);}
+.diff-cell{flex:1;padding:11px 14px;font-size:11.5px;border-right:1px solid var(--border);}
+.diff-cell:last-child{border-right:none;}
+.diff-cell.head{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:400;}
+.diff-cell.us{background:rgba(184,150,90,.05);color:var(--ink);}
+.diff-cell.pos{color:var(--sage);}
+.diff-cell.neg{color:var(--rose);}
+.diff-cell.attr-c{color:var(--ink);font-weight:500;}
+.hashtag-box{background:white;border:1px solid var(--border);padding:18px;}
+.hashtag-box h4{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.foot{background:var(--ink);color:white;padding:36px 76px;display:flex;justify-content:space-between;align-items:center;}
+.foot-brand{font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:white;}
+.foot-brand em{font-style:italic;color:var(--gold);}
+.foot-meta{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:right;line-height:1.8;}
+.info-row{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);}
+.info-row:last-child{border-bottom:none;}
+.info-row .ar{color:var(--gold);flex-shrink:0;margin-top:1px;}
+.info-body .it{font-size:13px;color:var(--ink);font-weight:500;margin-bottom:1px;}
+.info-body .id{font-size:11px;color:var(--ink4);}
+
+@media print {
+  @page { size: A4; margin: 0; }
+  .sidenav { display: none !important; }
+  .doc { margin-left: 0 !important; }
+  .cover { min-height: 100vh; page-break-after: always; }
+  .chap { page-break-before: always; padding-top: 40px !important; }
+  .sec { page-break-inside: avoid; }
+  .g2, .g3, .g4, .g2b, .g3b, .g4b { page-break-inside: avoid; }
+  .card, .card-g, .cw, .cell, .mem-tier, .persona, .couple-card, .comp-card, .svc-card, .kpi-card, .logo-option { page-break-inside: avoid; }
+  .pull { page-break-inside: avoid; }
+  .manifesto { page-break-inside: avoid; page-break-before: auto; }
+  .tbl, .price-tbl { page-break-inside: avoid; }
+  .cal-grid { page-break-inside: avoid; }
+  .copy-showcase { page-break-inside: avoid; }
+  .arc { page-break-inside: avoid; }
+  table { page-break-inside: avoid; }
+  tr { page-break-inside: avoid; }
+  .foot { page-break-before: always; }
+}
+</style>
+</head>
+<body>
+<nav class="sidenav">
+  <div class="nav-logo">TP</div>
+  <a href="#cover">Cover</a>
+  <a href="#naming">Naming</a>
+  <a href="#story">Story</a>
+  <a href="#logo">Logo</a>
+  <a href="#identity">Visual</a>
+  <a href="#voice">Voice</a>
+  <a href="#services">Service</a>
+  <a href="#couples">Couples</a>
+  <a href="#pricing">Price</a>
+  <a href="#member">Member</a>
+  <a href="#market">Comp</a>
+  <a href="#target">Target</a>
+  <a href="#journey">Journey</a>
+  <a href="#marketing">Mktg</a>
+  <a href="#sns">SNS</a>
+</nav>
+<div class="doc">
+<div class="cover" id="cover"><div class="cover-bg">Pause</div><div class="eyebrow">Complete Brand Document · v2.0 · 15 Chapters</div><h1><span class="the">The</span><span class="pause">Pause.</span></h1><div class="cdash"></div><p class="cover-copy">"New York never pauses.<br>You should."</p><div class="cover-meta"><div class="cm"><label>Location</label><span>42nd St & 5th Ave</span></div><div class="cm"><label>Opening</label><span>Sep–Oct 2025</span></div><div class="cm"><label>Concept</label><span>Intentional Recovery</span></div><div class="cm"><label>Contents</label><span>Brand · Logo · Service · Pricing · Membership · SNS · Couples</span></div></div></div>
+<div style="padding:52px 76px 0;margin-bottom:36px;"><div class="lbl" style="margin-bottom:16px;">Table of Contents</div><div class="toc-grid"><div class="toc-item"><div class="toc-num">I</div><div><div class="toc-name">Naming Rationale</div><div class="toc-sub">왜 "The Pause"인가</div></div></div><div class="toc-item"><div class="toc-num">II</div><div><div class="toc-name">Brand Story & Manifesto</div><div class="toc-sub">영문 선언문 포함</div></div></div><div class="toc-item"><div class="toc-num">III</div><div><div class="toc-name">Brand Philosophy</div><div class="toc-sub">4가지 핵심 철학</div></div></div><div class="toc-item"><div class="toc-num">IV</div><div><div class="toc-name">Logo Concept & Mood</div><div class="toc-sub">3가지 로고안 + 무드보드</div></div><div class="toc-new">NEW</div></div><div class="toc-item"><div class="toc-num">V</div><div><div class="toc-name">Visual Identity</div><div class="toc-sub">컬러·서체·레퍼런스</div></div></div><div class="toc-item"><div class="toc-num">VI</div><div><div class="toc-name">Voice, Tone & Key Copy</div><div class="toc-sub">핵심 영문 마케팅 카피</div></div></div><div class="toc-item"><div class="toc-num">VII</div><div><div class="toc-name">Service Architecture</div><div class="toc-sub">4가지 서비스 네이밍</div></div></div><div class="toc-item"><div class="toc-num">VIII</div><div><div class="toc-name">Couples Program</div><div class="toc-sub">커플 서비스 & 패키지</div></div></div><div class="toc-item"><div class="toc-num">IX</div><div><div class="toc-name">Pricing Strategy</div><div class="toc-sub">Red Light 포함 완성 단가표</div></div></div><div class="toc-item"><div class="toc-num">X</div><div><div class="toc-name">Membership Structure</div><div class="toc-sub">4티어 + 커플 멤버십</div></div></div><div class="toc-item"><div class="toc-num">XI</div><div><div class="toc-name">Competitive Analysis</div><div class="toc-sub">경쟁사 분석 & 차별화 6가지</div></div></div><div class="toc-item"><div class="toc-num">XII</div><div><div class="toc-name">Target Personas</div><div class="toc-sub">3개 고객 페르소나</div></div></div><div class="toc-item"><div class="toc-num">XIII</div><div><div class="toc-name">Customer Journey</div><div class="toc-sub">5단계 여정 & 퍼널</div></div></div><div class="toc-item"><div class="toc-num">XIV</div><div><div class="toc-name">Service Marketing Strategy</div><div class="toc-sub">4단계 Growth Loop</div></div></div><div class="toc-item"><div class="toc-num">XV</div><div><div class="toc-name">SNS Content Calendar</div><div class="toc-sub">8월 Pre-Launch + 9월 Grand Opening</div></div></div></div></div>
+<div class="chap" id="naming"><span class="chap-n">I</span><div class="chap-line"></div><span class="chap-lbl">Naming Rationale</span></div>
+<div class="sec"><h2 class="sec-title">왜 <em>"The Pause"</em>인가</h2><p class="sec-sub">세 글자 안에 담긴 브랜드 철학의 전부</p>
+<div class="g3"><div class="card"><div class="lbl">The</div><div style="font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--gold);margin-bottom:10px;">The</div><p class="bt">수많은 쉼 중 하나가 아닌, <strong>반드시 가져야 할 바로 그 쉼.</strong> 정관사 하나가 브랜드를 완성한다.</p></div>
+<div class="card"><div class="lbl">Pause</div><div style="font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--gold);margin-bottom:10px;">Pause</div><p class="bt">음악에서 Pause는 침묵이 아니다. <strong>다음 음을 더 아름답게 만드는 공간.</strong> 가장 능동적인 형태의 휴식.</p></div>
+<div class="card"><div class="lbl">NYC Context</div><div style="font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--gold);margin-bottom:10px;">42nd & 5th</div><p class="bt">지구상에서 가장 빠른 곳 한가운데. <strong>위치 자체가 브랜드 스토리를 완성한다.</strong></p></div></div>
+<div class="pull" style="margin-top:24px;"><p>The Pause는 서비스가 아니다. 도시가 당신에게 빼앗은 것을 — 고요함, 숨 쉴 공간, 자신과의 시간을 — 다시 돌려주는 행위다.</p><cite>Brand Core Statement</cite></div></div>
+
+<div class="chap" id="story"><span class="chap-n">II</span><div class="chap-line"></div><span class="chap-lbl">Brand Story & Manifesto</span></div>
+<div class="sec"><h2 class="sec-title">브랜드 <em>스토리</em></h2><p class="sec-sub">The Pause가 세상에 존재하는 이유</p>
+<div style="max-width:660px;">
+</div></div>
+
+<div class="manifesto"><div class="man-lbl">Brand Manifesto</div>
+<div class="man-big" style="font-size:22px;color:rgba(255,255,255,.5);font-weight:200;">You've been carrying the city.</div>
+<div class="man-sep"></div>
+<div class="man-big" style="font-size:32px;">For the next hour,</div>
+<div class="man-big" style="font-size:32px;"><em>you don't have to.</em></div>
+<div class="man-sep"></div>
+<div class="man-small" style="font-size:15px;color:rgba(255,255,255,.38);line-height:2.2;letter-spacing:.04em;">No agenda. No noise. Nothing to do<br>but let your body remember<br>what it feels like to be still.</div>
+<div class="man-sep"></div>
+<div class="man-big" style="font-size:18px;color:rgba(255,255,255,.75);font-weight:200;font-style:italic;">A Better Way to Recharge.</div>
+<div class="man-small" style="font-size:13px;color:rgba(255,255,255,.32);line-height:2;margin-top:8px;">You don't need a weekend retreat to invest in yourself.<br>Wellness should be accessible, effective, and easy to fit into everyday life.<br>Taking care of yourself shouldn't feel like another commitment —<br>it should be part of living well.</div>
+<div class="man-sep"></div>
+<div class="man-big" style="font-size:28px;"><em>The Pause.</em></div></div>
+
+<div class="chap"><span class="chap-n">III</span><div class="chap-line"></div><span class="chap-lbl">Brand Philosophy</span></div>
+<div class="sec"><h2 class="sec-title">브랜드 <em>철학 4기둥</em></h2><p class="sec-sub">The Pause를 지탱하는 4가지 핵심 개념</p>
+<div class="g2b"><div class="cw"><div class="lbl">Pillar 01</div><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:var(--ink);margin-bottom:8px;">Intentional Recovery <span style="font-size:12px;color:var(--ink4);font-family:'DM Sans',sans-serif;">의도적 회복</span></div><p class="bt">우연한 휴식이 아닌, 설계된 회복. 모든 것이 최적의 결과를 위해 계산되어 있다.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">Science-backed · Result-driven · Purposeful</div></div>
+<div class="cw"><div class="lbl">Pillar 02</div><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:var(--ink);margin-bottom:8px;">Urban Sanctuary <span style="font-size:12px;color:var(--ink4);font-family:'DM Sans',sans-serif;">도시 속 성역</span></div><p class="bt">42nd &amp; 5th. 맨하탄의 한복판에 있기 때문에 더 의미 있다.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">Contrast · Escape · Cocoon</div></div>
+<div class="cw"><div class="lbl">Pillar 03</div><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:var(--ink);margin-bottom:8px;">High Performance Self-Care <span style="font-size:12px;color:var(--ink4);font-family:'DM Sans',sans-serif;">성과를 위한 자기관리</span></div><p class="bt">인달전스가 아닌 인베스트먼트. 몸에 투자하는 것이 커리어에 투자하는 것과 같다.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">Performance · Investment · Return</div></div>
+<div class="cw"><div class="lbl">Pillar 04</div><div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:300;color:var(--ink);margin-bottom:8px;">Curated Simplicity <span style="font-size:12px;color:var(--ink4);font-family:'DM Sans',sans-serif;">큐레이션된 단순함</span></div><p class="bt">고를 필요 없다. 전문가가 이미 골라뒀다.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">Edit · Expert · Trust</div></div></div></div>
+<div class="chap" id="logo"><span class="chap-n">IV</span><div class="chap-line"></div><span class="chap-lbl">Logo Concept & Mood — NEW</span></div>
+<div class="sec"><h2 class="sec-title">로고 컨셉 & <em>무드보드</em></h2><p class="sec-sub">3가지 로고 방향안 + 브랜드 무드 레퍼런스 — 디자이너에게 전달할 비주얼 브리프</p>
+<div class="lbl" style="margin-bottom:14px;">로고 방향안 3가지</div>
+<div class="g3" style="margin-bottom:36px;">
+<div class="logo-option"><div class="logo-badge rec">Recommended</div><div class="logo-preview"><div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-weight:300;font-size:11px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;">The</div><div style="font-family:'Playfair Display',serif;font-weight:300;font-size:44px;font-style:italic;color:var(--ink);line-height:1;letter-spacing:-.02em;">Pause<span style="color:var(--gold);">.</span></div><div style="width:36px;height:1px;background:var(--gold);margin:8px auto 0;"></div></div></div><div class="logo-name">Option A — Wordmark + Period</div><p class="logo-desc">마침표(.)가 핵심. 가장 타임리스하고 확장성 높음. 명함·사인에지·패키지 모두 적합.</p></div>
+<div class="logo-option"><div class="logo-badge">Option B</div><div class="logo-preview"><div style="display:flex;align-items:center;gap:16px;"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" stroke="#b8965a" stroke-width="0.7" opacity="0.45"/><circle cx="22" cy="22" r="13" stroke="#b8965a" stroke-width="0.5" opacity="0.3"/><circle cx="22" cy="22" r="6" stroke="#b8965a" stroke-width="0.7" opacity="0.55"/><circle cx="22" cy="22" r="2" fill="#b8965a"/></svg><div style="text-align:left;"><div style="font-family:'Playfair Display',serif;font-size:10px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:3px;">The</div><div style="font-family:'Playfair Display',serif;font-size:24px;font-style:italic;color:var(--ink);line-height:1;font-weight:300;">Pause</div></div></div></div><div class="logo-name">Option B — Concentric Symbol</div><p class="logo-desc">원적외선 파장을 시각화한 동심원 심볼. 앱 아이콘·스탬프 단독 활용 가능.</p></div>
+<div class="logo-option"><div class="logo-badge">Option C</div><div class="logo-preview"><div style="text-align:center;"><div style="display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:8px;"><div style="width:3px;height:28px;background:var(--ink);border-radius:1px;opacity:.12;"></div><div style="width:3px;height:28px;background:var(--ink);border-radius:1px;opacity:.12;"></div></div><div style="font-family:'Playfair Display',serif;font-size:12px;font-style:italic;color:var(--gold);">The Pause</div><div style="font-size:7px;letter-spacing:.24em;color:var(--ink4);text-transform:uppercase;margin-top:3px;">42nd & Fifth · New York</div></div></div><div class="logo-name">Option C — Pause Symbol</div><p class="logo-desc">⏸ 기호를 추상화한 두 수직선. 가장 개념적. 패션·굿즈·스탬프 적합.</p></div></div>
+<div class="lbl" style="margin-bottom:14px;">브랜드 무드 레퍼런스 — 디자이너 전달용</div>
+<div class="g4" style="margin-bottom:28px;">
+<div class="card"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">Aesop</div><p class="bt" style="font-size:11.5px;">미니멀 공간, 절제된 소재 감각.</p></div>
+<div class="card"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">Le Labo</div><p class="bt" style="font-size:11.5px;">도시 정서, 수공예 터치, 시그니처 센트.</p></div>
+<div class="card"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">Equinox</div><p class="bt" style="font-size:11.5px;">고성과자 언어, 투자로서의 자기관리.</p></div>
+<div class="card"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">Kinfolk</div><p class="bt" style="font-size:11.5px;">여백, 자연광, 에디토리얼 감성.</p></div></div>
+<div class="lbl" style="margin-bottom:14px;">컬러 팔레트 — 무드 스왓치</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;padding:24px;background:white;border:1px solid var(--border);">
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#1a1a18;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Void Black</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#1A1A18</div></div>
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#b8965a;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Signature Gold</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#B8965A</div></div>
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#6b7c6e;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Sage Mist</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#6B7C6E</div></div>
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#c4bfb0;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Stone Dust</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#C4BFB0</div></div>
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#faf8f3;border:1px solid #e0ddd5;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Warm White</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#FAF8F3</div></div>
+<div style="display:flex;flex-direction:column;gap:5px;"><div style="width:60px;height:60px;background:#c4573a;border-radius:2px;"></div><div style="font-size:10px;color:var(--ink4);">Rose (커플)</div><div style="font-size:9px;color:var(--ink4);font-family:monospace;">#C4573A</div></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-left:16px;"><p class="bt" style="font-size:12px;">기본 3색: Void Black + Gold + Warm White. Rose는 커플 전용. 2–3색으로 절제.</p></div></div></div>
+
+<div class="chap" id="identity"><span class="chap-n">V</span><div class="chap-line"></div><span class="chap-lbl">Visual Identity</span></div>
+<div class="sec"><h2 class="sec-title">비주얼 <em>아이덴티티</em></h2><p class="sec-sub">서체 시스템 · 적용 지침</p>
+<div class="g2" style="margin-bottom:20px;">
+<div><div class="card"><div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:300;font-style:italic;color:var(--ink);">Playfair Display</div><div style="font-size:11px;color:var(--ink4);margin-top:4px;margin-bottom:14px;">헤드라인 · 서비스명 · 감성 카피</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--gold);">"The smartest hour in New York."</div></div></div>
+<div><div class="card"><div style="font-family:'DM Sans',sans-serif;font-size:20px;font-weight:300;letter-spacing:.06em;color:var(--ink2);">DM SANS · CLEAN & MODERN</div><div style="font-size:11px;color:var(--ink4);margin-top:4px;margin-bottom:14px;">본문 · 캡션 · UI 텍스트</div><div style="font-size:13px;color:var(--ink3);">Intentional Recovery · 42nd & Fifth · Manhattan</div></div></div></div>
+<div class="card-g"><div class="lbl">적용 원칙</div><div class="g3" style="margin-top:10px;gap:20px;">
+<div><div style="font-size:10px;font-weight:500;color:var(--ink);margin-bottom:5px;">계층 구조</div><p class="bt" style="font-size:12px;">Playfair는 감성·큰 텍스트만. DM Sans는 정보·UI 전용.</p></div>
+<div><div style="font-size:10px;font-weight:500;color:var(--ink);margin-bottom:5px;">트래킹 & 스페이싱</div><p class="bt" style="font-size:12px;">레이블은 넓은 자간. 여백이 럭셔리를 만든다.</p></div>
+<div><div style="font-size:10px;font-weight:500;color:var(--ink);margin-bottom:5px;">컬러 적용</div><p class="bt" style="font-size:12px;">Black / Gold / Stone 3색만 사용.</p></div></div></div></div>
+
+<div class="chap" id="voice"><span class="chap-n">VI</span><div class="chap-line"></div><span class="chap-lbl">Voice, Tone & Key Copy</span></div>
+<div class="sec"><h2 class="sec-title">보이스 & <em>핵심 마케팅 카피</em></h2><p class="sec-sub">The Pause가 말하는 방식 — 모든 핵심 카피는 영문으로</p>
+<div class="g3" style="margin-bottom:32px;">
+<div class="card"><div class="lbl">말하는 방식</div><div style="display:flex;flex-direction:column;gap:7px;"><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>조용하지만 확신에 차 있다</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>짧고 깊게</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>경험을 묘사한다</div><div style="display:flex;gap:7px;font-size:12px;color:var(--ink4);text-decoration:line-through;"><span>✗</span>기능을 나열한다</div><div style="display:flex;gap:7px;font-size:12px;color:var(--ink4);text-decoration:line-through;"><span>✗</span>불안을 자극한다</div></div></div>
+<div class="card"><div class="lbl">감정적 포지션</div><div style="display:flex;flex-direction:column;gap:7px;"><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>따뜻하고 지적이다</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>동료처럼 말한다</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>가능성을 말한다</div><div style="display:flex;gap:7px;font-size:12px;color:var(--ink4);text-decoration:line-through;"><span>✗</span>차갑게 전문적이다</div><div style="display:flex;gap:7px;font-size:12px;color:var(--ink4);text-decoration:line-through;"><span>✗</span>마케팅 클리셰</div></div></div>
+<div class="card"><div class="lbl">언어 미학</div><div style="display:flex;flex-direction:column;gap:7px;"><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>여백 있는 문장</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>감각 언어 (느낌, 냄새)</div><div style="display:flex;gap:7px;font-size:12px;"><span style="color:var(--sage);">✓</span>시적인 정확함</div><div style="display:flex;gap:7px;font-size:12px;color:var(--ink4);text-decoration:line-through;"><span>✗</span>빽빽한 정보 나열</div></div></div></div>
+<div class="lbl" style="margin-bottom:12px;">핵심 영문 마케팅 카피 모음</div>
+<div class="g2" style="gap:10px;">
+<div class="copy-showcase"><div class="copy-ctx">Website Hero · Brand Statement</div><div class="copy-line">New York never pauses.<br><em>You should.</em></div></div>
+<div class="copy-showcase"><div class="copy-ctx">Tagline</div><div class="copy-line"><em>The smartest hour in New York.</em></div></div>
+<div class="copy-showcase"><div class="copy-ctx">Instagram · The Cleanse (Infrared + Red Light)</div><div class="copy-line">An hour of heat. A week of clarity.<br><em>The Cleanse</em> — because some things are best let go.<small>#ThePauseNYC #IntentionalRecovery</small></div></div>
+<div class="copy-showcase"><div class="copy-ctx">Instagram · The Quiet (Head Spa)</div><div class="copy-line">The world keeps moving.<br>For sixty minutes, you don't have to.<br><em>The Quiet.</em></div></div>
+<div class="copy-showcase"><div class="copy-ctx">Instagram · The Rebuild (EMS)</div><div class="copy-line">Thirty minutes. Deeper than two hours at the gym.<br><em>The Rebuild</em> — built for people who don't have time to waste.</div></div>
+<div class="copy-showcase"><div class="copy-ctx">Instagram · The Reveal (Facial)</div><div class="copy-line">The city takes. <em>The Reveal</em> gives back.<br>Your skin remembers what it felt like before.</div></div>
+<div class="copy-showcase"><div class="copy-ctx">Email Subject — Re-engagement</div><div class="copy-line">It's been a while. <em>Your body noticed.</em></div></div>
+<div class="copy-showcase"><div class="copy-ctx">Membership CTA</div><div class="copy-line">Some things deserve to be a habit.<br><em>The Pause Membership</em> — your weekly reset, made permanent.</div></div>
+<div class="copy-showcase"><div class="copy-ctx">Couples Program</div><div class="copy-line">Two people. One hour.<br><em>No phones, no agenda, no city.</em><br>The Pause for Two.</div></div>
+<div class="copy-showcase"><div class="copy-ctx">Grand Opening</div><div class="copy-line"><em>42nd & Fifth.</em> The place where New York finally stops.<br>Now open.</div></div></div></div>
+<div class="chap" id="services"><span class="chap-n">VII</span><div class="chap-line"></div><span class="chap-lbl">Service Architecture</span></div>
+<div class="sec"><h2 class="sec-title">서비스 <em>아키텍처</em></h2><p class="sec-sub">4가지 서비스의 브랜드 언어 — The Pause 세계관에 통합된 이름들</p>
+<div class="g2b" style="margin-bottom:24px;">
+<div class="cw"><div class="svc-tag">Red Light + Infrared Therapy</div><div class="svc-name">The Cleanse</div><div class="svc-eng">Calorie Bar · 원적외선 세포 회복</div><p class="bt">Calorie Bar의 원적외선 열이 세포 수준의 회복을 촉진한다. 독소 배출, 순환 개선, 콜라겐 재생.</p><div class="svc-line">"Let go of what the city put in you."</div></div>
+<div class="cw"><div class="svc-tag">EMS Body Sculpting</div><div class="svc-name">The Rebuild</div><div class="svc-eng">Musclender · EMS 근육 재건</div><p class="bt">30분 = 90분 운동 효과. Musclender의 전자기장이 근육 깊은 층까지 도달해 체형을 조각한다.</p><div class="svc-line">"Less time. Deeper change."</div></div>
+<div class="cw"><div class="svc-tag">Head Spa</div><div class="svc-name">The Quiet</div><div class="svc-eng">두피 집중 케어 & 딥 릴렉세이션</div><p class="bt">두피 긴장이 풀리면 몸 전체가 내려간다. 탈모 케어를 넘어 가장 완전한 형태의 휴식.</p><div class="svc-line">"Where the overhead world disappears."</div></div>
+<div class="cw"><div class="svc-tag">Facial Treatment</div><div class="svc-name">The Reveal</div><div class="svc-eng">개인화 피부 트리트먼트 & 재생</div><p class="bt">매연, 스트레스, 불면의 흔적을 걷어낸다. 피부의 본래 상태로 되돌아가는 시간.</p><div class="svc-line">"Return to your original skin."</div></div></div>
+<div class="card-g"><div class="lbl">시그니처 콤보 패키지</div><div class="g3" style="margin-top:12px;gap:20px;">
+<div><div style="font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--ink);margin-bottom:3px;">The Full Pause</div><div style="font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;">4가지 All-in</div><p class="bt" style="font-size:12px;">4종 All-in. 전신 완전 리셋.</p></div>
+<div><div style="font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--ink);margin-bottom:3px;">The Body Pause</div><div style="font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;">바디 집중</div><p class="bt" style="font-size:12px;">Cleanse + Rebuild. 바디 집중.</p></div>
+<div><div style="font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--ink);margin-bottom:3px;">The Beauty Pause</div><div style="font-size:9px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;">뷰티 집중</div><p class="bt" style="font-size:12px;">Quiet + Reveal. 두피부터 피부까지.</p></div></div></div></div>
+
+<div class="chap" id="couples"><span class="chap-n">VIII</span><div class="chap-line"></div><span class="chap-lbl">Couples Program</span></div>
+<div class="sec"><h2 class="sec-title">커플 <em>프로그램</em></h2><p class="sec-sub">"Two people. One hour. No phones, no agenda, no city." — The Pause for Two</p>
+<div class="g4" style="margin-bottom:22px;">
+<div class="couple-card"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:5px;">Infrared Duo · 60min</div><div class="couple-name">The Shared Cleanse</div><div class="couple-eng">커플 원적외선</div><p class="bt" style="font-size:12px;">같은 열기 안에서. 말이 필요 없는 60분.</p><div class="couple-line">"Together in the heat. Lighter apart."</div><div class="couple-price">$149<span> / couple</span></div></div>
+<div class="couple-card"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:5px;">Head Spa Duo · 50min</div><div class="couple-name">The Quiet for Two</div><div class="couple-eng">커플 헤드 스파</div><p class="bt" style="font-size:12px;">두 스페셜리스트 동시 진행. 같은 공간, 각자의 고요함.</p><div class="couple-line">"Two minds. One silence."</div><div class="couple-price">$229<span> / couple</span></div></div>
+<div class="couple-card"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:5px;">Facial Duo · 45min</div><div class="couple-name">The Reveal for Two</div><div class="couple-eng">커플 페이셜</div><p class="bt" style="font-size:12px;">나란한 베드에서 동시 진행. 끝나면 둘 다 낫다.</p><div class="couple-line">"Better faces. Better together."</div><div class="couple-price">$179<span> / couple</span></div></div>
+<div class="couple-card"><div style="font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:5px;">EMS Parallel · 45min</div><div class="couple-name">The Rebuild for Two</div><div class="couple-eng">커플 EMS</div><p class="bt" style="font-size:12px;">운동은 각자, 응원은 함께.</p><div class="couple-line">"Same goal. Side by side."</div><div class="couple-price">$119<span> / couple</span></div></div></div>
+<div class="g3" style="margin-bottom:18px;">
+<div class="card" style="border-top:3px solid var(--rose);"><div style="font-size:9px;color:var(--rose);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Date Night Package</div><div style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);margin-bottom:5px;">The Pause Date</div><p class="bt" style="font-size:12px;">Shared Cleanse + Quiet for Two · 2.5h · 웰컴 샴페인 포함</p><div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--rose);margin-top:10px;">$329<span style="font-size:10px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> / couple</span></div></div>
+<div class="card" style="border-top:3px solid var(--rose);background:linear-gradient(135deg,#fff7f5,#fde8e2);border-color:rgba(196,87,58,.2);"><div style="font-size:9px;color:var(--rose);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Signature · Most Romantic ★</div><div style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);margin-bottom:5px;">The Full Pause for Two</div><p class="bt" style="font-size:12px;">4종 All-in · 4–5h · 전담 스페셜리스트 2인 + 기념 카드</p><div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--rose);margin-top:10px;">$620<span style="font-size:10px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> / couple</span></div></div>
+<div class="card" style="border-top:3px solid var(--rose);"><div style="font-size:9px;color:var(--rose);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Beauty Duo Package</div><div style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--ink);margin-bottom:5px;">The Beauty Pause for Two</div><p class="bt" style="font-size:12px;">Quiet + Reveal for Two · 2.5h · 두피 분석 리포트 포함</p><div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--rose);margin-top:10px;">$369<span style="font-size:10px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> / couple</span></div></div></div>
+<div class="g2">
+<div class="card"><div class="lbl">커플 멤버십</div><div style="display:flex;gap:20px;margin-top:6px;"><div style="flex:1;border-right:1px solid var(--border);padding-right:18px;"><div style="font-size:10px;color:var(--ink4);margin-bottom:5px;">Together Monthly</div><div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--ink);font-style:italic;">$320<span style="font-size:11px;font-family:'DM Sans',sans-serif;color:var(--ink4);">/월</span></div><div style="font-size:11px;color:var(--ink4);margin-top:3px;">공유 8크레딧 · 개별 대비 20% 할인</div></div><div style="flex:1;"><div style="font-size:10px;color:var(--ink4);margin-bottom:5px;">The Devoted Two</div><div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--rose);font-style:italic;">$560<span style="font-size:11px;font-family:'DM Sans',sans-serif;color:var(--ink4);">/월</span></div><div style="font-size:11px;color:var(--ink4);margin-top:3px;">공유 16크레딧 + 월 1회 패키지 무료</div></div></div></div>
+<div class="card"><div class="lbl">Special Occasions Add-on</div><div style="display:flex;flex-direction:column;gap:0;margin-top:6px;"><div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 0;border-bottom:1px solid var(--border);"><span>Anniversary Package</span><span style="color:var(--rose);">+$80</span></div><div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 0;border-bottom:1px solid var(--border);"><span>Valentine Edition</span><span style="color:var(--rose);">+$60</span></div><div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 0;border-bottom:1px solid var(--border);"><span>Proposal Support</span><span style="color:var(--rose);">맞춤 견적</span></div><div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 0;"><span>Couples Gift Card</span><span style="color:var(--rose);">$200 / $420 / $890</span></div></div></div></div></div>
+<div class="chap" id="pricing"><span class="chap-n">IX</span><div class="chap-line"></div><span class="chap-lbl">Pricing Strategy</span></div>
+<div class="sec"><h2 class="sec-title">프라이싱 <em>전략</em></h2><p class="sec-sub">NYC 경쟁사 단가 리서치 기반 — Red Light Therapy 포함 완성 단가표</p>
+<div class="lbl" style="margin-bottom:12px;">NYC 경쟁사 Red Light / Infrared 단가 리서치</div>
+<table class="tbl" style="margin-bottom:28px;"><thead><tr><th>업체</th><th>세션 유형</th><th>단가</th><th>위치</th><th>포지션</th></tr></thead><tbody>
+<tr><td>La Réserve</td><td>Full Body 30분 / 45분</td><td>$60 / $75</td><td>NYC</td><td>중상위</td></tr>
+<tr><td>HigherDOSE</td><td>Infrared Sauna 60분</td><td>$65</td><td>Williamsburg / SoHo</td><td>중간</td></tr>
+<tr><td>Red Light Therapy NY</td><td>16세션 패키지</td><td>$1,599 (≈$100/회)</td><td>UES 85th St</td><td>중상위</td></tr>
+<tr><td>Restore Hyper Wellness</td><td>무제한 멤버십</td><td>$449/월</td><td>NYC</td><td>체인 브랜드</td></tr>
+<tr><td style="color:var(--gold);font-weight:600;">전국 평균</td><td>일반 세션</td><td>$25–$85 (평균 $55)</td><td>전국</td><td>기준선</td></tr>
+</tbody></table>
+<div class="lbl" style="margin-bottom:12px;">단품 서비스 단가표</div>
+<table class="price-tbl" style="margin-bottom:28px;"><thead><tr><th>서비스 (브랜드명)</th><th>원서비스</th><th>시간</th><th>단가</th><th>비고</th></tr></thead><tbody>
+<tr><td>Oxygen Boost<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">산소 부스터</span></td><td>Oxygen Therapy</td><td>10분</td><td class="price-val">$25</td><td style="font-size:11px;color:var(--ink4);">단독 $25 · 모든 패키지 포함 시 무료</td></tr>
+<tr class="hl-row"><td>Recovery Pod<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">Calorie Bar · The Cleanse</span></td><td>Calorie Bar (원적외선)</td><td>30분</td><td class="price-val">$78</td><td style="font-size:11px;color:var(--ink4);">멤버십 앵커 서비스</td></tr>
+<tr><td>EMS Training<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">Musclender · The Rebuild</span></td><td>Musclender (EMS)</td><td>30분</td><td class="price-val">$68</td><td style="font-size:11px;color:var(--ink4);">30분 = 2시간 운동 효과</td></tr>
+<tr class="hl-row"><td>Express Facial<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">The Reveal</span></td><td>Facial Treatment</td><td>45분</td><td class="price-val">$99</td><td style="font-size:11px;color:var(--ink4);">점심시간 최적화 포맷</td></tr>
+<tr><td>Signature Head Spa<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">The Quiet ⭐</span></td><td>Head Spa</td><td>50분</td><td class="price-val">$128</td><td style="font-size:11px;color:var(--ink4);">TikTok 바이럴 핵심 · 최고 단가</td></tr>
+</tbody></table>
+
+<div class="lbl" style="margin-bottom:12px;">패키지 단가표</div>
+<table class="price-tbl" style="margin-bottom:28px;"><thead><tr><th>패키지명</th><th>구성 & 단가</th><th>시간</th><th>면가</th><th>패키지가</th><th>비중</th></tr></thead><tbody>
+<tr><td>Executive Reset</td><td style="font-size:11px;color:var(--ink4);">Musclender $68 + Calorie Bar $78 + Oxygen <span style="color:var(--sage);">free</span></td><td>70분</td><td style="font-size:11px;color:var(--ink4);">$146</td><td class="price-val">$125<span style="font-size:9px;color:var(--sage);"> save $21 · 14% off</span></td><td style="font-size:11px;color:var(--gold);">10–15%</td></tr>
+<tr><td>Glow Reset</td><td style="font-size:11px;color:var(--ink4);">Calorie Bar $78 + Facial $99 + Oxygen <span style="color:var(--sage);">free</span></td><td>85분</td><td style="font-size:11px;color:var(--ink4);">$177</td><td class="price-val">$149<span style="font-size:9px;color:var(--sage);"> save $28 · 16% off</span></td><td style="font-size:11px;color:var(--gold);">15–20%</td></tr>
+<tr class="hl-row"><td>Essential Reset ⭐<br><span style="font-size:10px;font-weight:300;color:var(--ink4);">메인 드라이버</span></td><td style="font-size:11px;color:var(--ink4);">Calorie Bar $78 + Head Spa $128 + Oxygen <span style="color:var(--sage);">free</span></td><td>90분</td><td style="font-size:11px;color:var(--ink4);">$206</td><td class="price-val">$175<span style="font-size:9px;color:var(--sage);"> save $31 · 15% off</span></td><td style="font-size:11px;color:var(--rose);font-weight:500;">40–50%</td></tr>
+<tr><td>Ultimate Recovery</td><td style="font-size:11px;color:var(--ink4);">Calorie Bar $78 + Musclender $68 + Head Spa $128 + Oxygen <span style="color:var(--sage);">free</span></td><td>120분</td><td style="font-size:11px;color:var(--ink4);">$274</td><td class="price-val">$229<span style="font-size:9px;color:var(--sage);"> save $45 · 16% off</span></td><td style="font-size:11px;color:var(--gold);">15–20%</td></tr>
+<tr class="hl-row"><td>Complete Pause 👑</td><td style="font-size:11px;color:var(--ink4);">Calorie Bar $78 + Musclender $68 + Head Spa $128 + Facial $99 + Oxygen <span style="color:var(--sage);">free</span></td><td>165분</td><td style="font-size:11px;color:var(--ink4);">$373</td><td class="price-val">$299<span style="font-size:9px;color:var(--sage);"> save $74 · 20% off</span></td><td style="font-size:11px;color:var(--gold);">5–10%</td></tr>
+</tbody></table>
+
+<div class="pull"><p>Essential Reset ($175)가 매출의 40–50%를 담당하는 메인 드라이버. Essential Reset이 멤버십 전환의 핵심 트리거. Head Spa 단품 고객을 Premium으로 자연스럽게 유도한다. Oxygen Boost는 $25 저단가 진입 서비스로 첫 방문 허들을 낮추는 역할.</p><cite>Pricing Architecture Strategy</cite></div></div>
+
+
+<div class="chap" id="capacity"><span class="chap-n">X-B</span><div class="chap-line"></div><span class="chap-lbl">Equipment Capacity & Turnover</span></div>
+<div class="sec">
+  <h2 class="sec-title">장비 <em>최대 회전률</em> 분석</h2>
+  <p class="sec-sub">헤드스파 1개 · 페이셜 1개 · Calorie Bar 2대 · 산소룸 1개 — 10시간 운영 기준</p>
+
+  <div class="g4b" style="margin-bottom:24px;">
+    <div class="cw"><div class="lbl">Head Spa Bed</div>
+      <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:var(--ink);line-height:1;">12<span style="font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> 세션/일</span></div>
+      <div style="font-size:11px;color:var(--gold);margin:4px 0;">312 세션/월</div>
+      <div style="font-size:10px;color:var(--ink4);line-height:1.7;">1베드 · 50분 세션<br>파우더룸 별도 → 베드 점유 없음<br><strong style="color:var(--rose);">★ 병목 지점</strong></div>
+      <div style="margin-top:10px;height:4px;background:var(--bg3);"><div style="width:100%;height:100%;background:var(--rose);"></div></div>
+      <div style="font-size:9px;color:var(--rose);margin-top:3px;">최우선 관리 필요</div>
+    </div>
+    <div class="cw"><div class="lbl">Facial Bed</div>
+      <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:var(--ink);line-height:1;">13<span style="font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> 세션/일</span></div>
+      <div style="font-size:11px;color:var(--gold);margin:4px 0;">338 세션/월</div>
+      <div style="font-size:10px;color:var(--ink4);line-height:1.7;">1베드 · 45분 세션<br>에스테티션 상주 필요<br><strong style="color:var(--rose);">★ 병목 지점</strong></div>
+      <div style="margin-top:10px;height:4px;background:var(--bg3);"><div style="width:100%;height:100%;background:var(--rose);"></div></div>
+      <div style="font-size:9px;color:var(--rose);margin-top:3px;">최우선 관리 필요</div>
+    </div>
+    <div class="cw"><div class="lbl">Calorie Bar (원적외선)</div>
+      <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:var(--ink);line-height:1;">40<span style="font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> 세션/일</span></div>
+      <div style="font-size:11px;color:var(--gold);margin:4px 0;">1,040 세션/월</div>
+      <div style="font-size:10px;color:var(--ink4);line-height:1.7;">2대 · 30분 세션<br>스태프 최소 개입 가능<br><strong style="color:var(--sage);">여유 있음</strong></div>
+      <div style="margin-top:10px;height:4px;background:var(--bg3);"><div style="width:55%;height:100%;background:var(--sage);"></div></div>
+      <div style="font-size:9px;color:var(--sage);margin-top:3px;">멤버십 앵커로 활용 최적</div>
+    </div>
+    <div class="cw"><div class="lbl">산소룸 (Oxygen)</div>
+      <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:300;color:var(--ink);line-height:1;">60<span style="font-size:14px;font-family:'DM Sans',sans-serif;color:var(--ink4);"> 세션/일</span></div>
+      <div style="font-size:11px;color:var(--gold);margin:4px 0;">1,560 세션/월</div>
+      <div style="font-size:10px;color:var(--ink4);line-height:1.7;">1룸 · 10분 세션<br>패키지 번들 시 독립예약 불필요<br><strong style="color:var(--sage);">충분</strong></div>
+      <div style="margin-top:10px;height:4px;background:var(--bg3);"><div style="width:30%;height:100%;background:var(--sage);"></div></div>
+      <div style="font-size:9px;color:var(--sage);margin-top:3px;">번들 처리 권장</div>
+    </div>
+  </div>
+
+  <div class="g2" style="margin-bottom:20px;">
+    <div class="card" style="border-left:3px solid var(--rose);">
+      <div class="lbl">헤드스파 + 페이셜 수익 극대화 전략</div>
+      <div style="margin-top:8px;">
+        <div class="info-row"><div class="ar" style="color:var(--rose);">!</div><div class="info-body"><div class="it">하루 24 슬롯이 전체 매출의 핵심</div><div class="id">헤드스파 12슬롯 × $128 + 페이셜 12슬롯 × $99 = 완판 시 $2,724/일</div></div></div>
+        <div class="info-row"><div class="ar" style="color:var(--rose);">!</div><div class="info-body"><div class="it">멤버십 슬롯 배분 원칙</div><div class="id">헤드스파·페이셜 멤버 전용 슬롯: 하루 최대 4슬롯(33%). 나머지 8슬롯은 단건 워크인 보호.</div></div></div>
+        <div class="info-row"><div class="ar" style="color:var(--rose);">!</div><div class="info-body"><div class="it">파우더룸 분리의 장점</div><div class="id">헤드스파 50분 = 트리트먼트만. 드라이는 파우더룸. 베드 회전 극대화 — 블로우아웃 대기 없음.</div></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="lbl">월 최대 매출 시뮬레이션 (100% 가동 기준)</div>
+      <div style="margin-top:10px;">
+        <div class="rev-bar"><div class="rev-label"><span>Head Spa 312회 × $128</span><span style="color:var(--gold);">$39,936</span></div><div class="rev-track"><div class="rev-fill" style="width:100%;"></div></div></div>
+        <div class="rev-bar"><div class="rev-label"><span>Facial 338회 × $99</span><span style="color:var(--gold);">$33,462</span></div><div class="rev-track"><div class="rev-fill" style="width:77%;"></div></div></div>
+        <div class="rev-bar"><div class="rev-label"><span>Calorie Bar 1,040회 × $78</span><span style="color:var(--gold);">$81,120</span></div><div class="rev-track"><div class="rev-fill" style="width:85%;"></div></div></div>
+        <div style="margin-top:12px;padding-top:12px;border-top:2px solid var(--borderg);">
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--ink4);">이론 최대 합산</span><span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);">$151K+/월</span></div>
+          <div style="display:flex;justify-content:space-between;margin-top:4px;"><span style="font-size:11px;color:var(--ink4);">현실적 목표 (60% 가동)</span><span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--sage);">~$90K/월</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="chap" id="member"><span class="chap-n">X</span><div class="chap-line"></div><span class="chap-lbl">Membership Structure</span></div>
+<div class="sec"><h2 class="sec-title">멤버십 <em>구조</em></h2><p class="sec-sub">세션 횟수제 — 장비 용량 기반 설계 · 무제한 없음</p>
+<div style="background:rgba(196,87,58,.06);border:1px solid rgba(196,87,58,.2);padding:14px 18px;margin-bottom:22px;display:flex;gap:12px;align-items:flex-start;"><div style="color:var(--rose);flex-shrink:0;">⚠</div><div><div style="font-size:11px;font-weight:500;color:var(--ink);margin-bottom:3px;">세션 횟수제 · $189 / $289 / $489</div><div style="font-size:11px;color:var(--ink4);line-height:1.7;">Pod 2대 최대 40세션/일. 무제한 멤버 1명이 월 20회 사용 시 면가 $1,180 → $149 대비 손실 $1,031. Oxygen은 Pod 이용 시 번들, 독립 예약 없음.</div></div></div>
+<div class="g3b" style="margin-bottom:24px;">
+<div class="mem-tier"><div class="mem-badge">Essential</div><div class="mem-name">Essential</div><div class="mem-sub">격주 리커버리 루틴</div><div class="mem-price">$189<span>/월</span></div><div class="mem-cycle">자동결제 · 월 단위</div><div class="mem-sess"><div class="mem-sess-n">2</div><div class="mem-sess-l">Recovery Pod 세션/월</div></div><div class="perk"><span class="dot">·</span>Recovery Pod 2회/월</div><div class="perk"><span class="dot">·</span>Oxygen — Pod 이용 시 무료 번들</div><div class="perk"><span class="dot">·</span>EMS 또는 Facial 1회/월</div><div class="perk dim"><span class="dot">·</span>Head Spa 미포함</div><div style="margin-top:10px;padding:12px 14px;background:var(--bg2);border-top:1px solid var(--border);">
+  <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">포함 서비스 면가</div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>Calorie Bar 2회 ($78×2)</span><span>$156</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>EMS $68 또는 Facial $99</span><span>$68–99</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--sage);margin-bottom:8px;"><span>Oxygen</span><span>무료</span></div>
+  <div style="height:1px;background:var(--border);margin-bottom:8px;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink);font-weight:500;margin-bottom:3px;"><span>면가 합계</span><span>$224–255</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--gold);margin-bottom:3px;"><span>멤버십가 $189 → 절약</span><span>$35–66</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--rose);"><span>할인율</span><span>~16–26% off</span></div>
+</div><div class="mem-cta">시작하기</div></div>
+<div class="mem-tier ft"><div class="mem-badge rc">Most Popular</div><div class="mem-name">Premium</div><div class="mem-sub">주 1회 완성 루틴</div><div class="mem-price">$289<span>/월</span></div><div class="mem-cycle">자동결제 · 월 단위</div><div class="mem-sess"><div class="mem-sess-n">3</div><div class="mem-sess-l">Recovery Pod 세션/월</div></div><div class="perk"><span class="dot">·</span>Recovery Pod 3회/월</div><div class="perk"><span class="dot">·</span>Oxygen — Pod 이용 시 무료 번들</div><div class="perk"><span class="dot">·</span>EMS / Facial / Head Spa 2회/월</div><div class="perk"><span class="dot">·</span>우선 예약 슬롯</div><div style="margin-top:10px;padding:12px 14px;background:rgba(184,150,90,.06);border-top:1px solid var(--borderg);">
+  <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">포함 서비스 면가</div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>Calorie Bar 3회 ($78×3)</span><span>$234</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>Head Spa 2회 ($128×2)</span><span>$256</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span style="font-size:10px;color:var(--ink4);">or Facial 2회 ($99×2)</span><span style="font-size:10px;color:var(--ink4);">$198</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--sage);margin-bottom:8px;"><span>Oxygen</span><span>무료</span></div>
+  <div style="height:1px;background:var(--borderg);margin-bottom:8px;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink);font-weight:500;margin-bottom:3px;"><span>면가 합계</span><span>$432–490</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--gold);margin-bottom:3px;"><span>멤버십가 $289 → 절약</span><span>$143–201</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--rose);"><span>할인율</span><span>~33–41% off</span></div>
+</div><div class="mem-cta">가장 인기</div></div>
+<div class="mem-tier"><div class="mem-badge">Executive</div><div class="mem-name">Executive</div><div class="mem-sub">주 1회 프리미엄 루틴</div><div class="mem-price">$489<span>/월</span></div><div class="mem-cycle">자동결제 · 월 단위</div><div class="mem-sess"><div class="mem-sess-n">5</div><div class="mem-sess-l">Recovery Pod 세션/월</div></div><div class="perk"><span class="dot">·</span>Recovery Pod 5회/월</div><div class="perk"><span class="dot">·</span>Oxygen — Pod 이용 시 무료 번들</div><div class="perk"><span class="dot">·</span>EMS / Facial / Head Spa 3회/월</div><div style="margin-top:10px;padding:12px 14px;background:var(--bg2);border-top:1px solid var(--border);">
+  <div style="font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">포함 서비스 면가</div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>Calorie Bar 5회 ($78×5)</span><span>$390</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span>Head Spa 3회 ($128×3)</span><span>$384</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink3);margin-bottom:4px;"><span style="font-size:10px;color:var(--ink4);">or Facial 3회 ($99×3)</span><span style="font-size:10px;color:var(--ink4);">$297</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--sage);margin-bottom:8px;"><span>Oxygen</span><span>무료</span></div>
+  <div style="height:1px;background:var(--border);margin-bottom:8px;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink);font-weight:500;margin-bottom:3px;"><span>면가 합계</span><span>$674–774</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--gold);margin-bottom:3px;"><span>멤버십가 $489 → 절약</span><span>$185–285</span></div>
+  <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--rose);"><span>할인율</span><span>~27–37% off</span></div>
+</div><div class="mem-cta">Executive 가입</div></div></div>
+<div class="card"><div class="lbl">멤버십 가치 분석</div><div style="margin-top:6px;"><div class="info-row"><div class="ar">→</div><div class="info-body"><div class="it">Essential $189 / 월</div><div class="id">Calorie Bar 2회 $156 + EMS/Facial 1회. 격주 루틴.</div></div></div><div class="info-row"><div class="ar">→</div><div class="info-body"><div class="it">Premium $289 / 월</div><div class="id">Calorie Bar 3회 $234 + Head Spa 2회 $256 → 면가 $490.</div></div></div><div class="info-row"><div class="ar">→</div><div class="info-body"><div class="it">Executive $489 / 월</div><div class="id">Calorie Bar 5회 $390 + 프리미엄 4회 $400 → 면가 $790.</div></div></div><div class="info-row"><div class="ar">→</div><div class="info-body"><div class="it">업그레이드 트리거</div><div class="id">헤드스파 월 2회 루틴 → Premium이 단가 절약 명확.</div></div></div></div></div>
+<div class="card"><div class="lbl">MRR 시뮬레이션 — 오픈 6개월 목표</div><div style="margin-top:12px;"><div class="rev-bar"><div class="rev-label"><span>Essential 60명 × $189</span><span>$11,340/월</span></div><div class="rev-track"><div class="rev-fill" style="width:45%;"></div></div></div><div class="rev-bar"><div class="rev-label"><span>Premium 50명 × $289</span><span>$14,450/월</span></div><div class="rev-track"><div class="rev-fill" style="width:62%;"></div></div></div><div class="rev-bar"><div class="rev-label"><span>Executive 20명 × $489</span><span>$9,780/월</span></div><div class="rev-track"><div class="rev-fill" style="width:40%;"></div></div></div><div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:12px;color:var(--ink4);">멤버십 예상 총 MRR</span><span style="font-family:'Playfair Display',serif;font-size:26px;color:var(--gold);font-weight:300;">$29K+<span style="font-size:11px;font-family:'DM Sans',sans-serif;color:var(--ink4);">/월</span></span></div></div></div></div></div>
+
+<div class="chap" id="market"><span class="chap-n">XI</span><div class="chap-line"></div><span class="chap-lbl">Competitive Analysis</span></div>
+<div class="sec"><h2 class="sec-title">경쟁사 분석 & <em>차별화</em></h2><p class="sec-sub">뉴욕 웰니스 시장의 주요 플레이어 분석 — 6가지 차별화 무기</p>
+<div class="g4" style="margin-bottom:24px;">
+<div class="comp-card"><div class="comp-name">Chillhouse</div><div class="comp-type">Nail + Wellness · NYC</div><div class="comp-row"><span class="attr">주요 서비스</span><span>네일+마사지+페이셜</span></div><div class="comp-row"><span class="attr">가격대</span><span class="mid">$80–$180</span></div><div class="comp-row"><span class="attr">SNS 파워</span><span class="good">매우 강함</span></div><div class="comp-row"><span class="attr">테크 웰니스</span><span class="weak">없음</span></div><div class="comp-row"><span class="attr">EMS</span><span class="weak">없음</span></div></div>
+<div class="comp-card"><div class="comp-name">Heyday</div><div class="comp-type">Facial Specialist Chain</div><div class="comp-row"><span class="attr">주요 서비스</span><span>페이셜 특화</span></div><div class="comp-row"><span class="attr">가격대</span><span class="mid">$100–$200</span></div><div class="comp-row"><span class="attr">멤버십</span><span class="mid">$149/월</span></div><div class="comp-row"><span class="attr">테크 웰니스</span><span class="weak">없음</span></div><div class="comp-row"><span class="attr">EMS</span><span class="weak">없음</span></div></div>
+<div class="comp-card"><div class="comp-name">Hotel Spa</div><div class="comp-type">Mandarin / Plaza Level</div><div class="comp-row"><span class="attr">주요 서비스</span><span>풀 스파</span></div><div class="comp-row"><span class="attr">가격대</span><span class="weak">$250–$600+</span></div><div class="comp-row"><span class="attr">접근성</span><span class="weak">낮음 (호텔 내)</span></div><div class="comp-row"><span class="attr">점심 세션</span><span class="weak">사실상 불가</span></div><div class="comp-row"><span class="attr">멤버십</span><span class="weak">없음</span></div></div>
+<div class="comp-card us"><div class="comp-name" style="color:var(--gold);">The Pause ★</div><div class="comp-type">Tech-powered Urban Wellness</div><div class="comp-row"><span class="attr">테크+휴먼 복합</span><span class="good">맨하탄 유일</span></div><div class="comp-row"><span class="attr">위치</span><span class="good">42nd & 5th 최적</span></div><div class="comp-row"><span class="attr">점심 세션</span><span class="good">핵심 포맷</span></div><div class="comp-row"><span class="attr">멤버십</span><span class="good">4티어 설계</span></div><div class="comp-row"><span class="attr">커플 프로그램</span><span class="good">체계적 유일</span></div></div></div>
+<div class="lbl" style="margin-bottom:12px;">6가지 차별화 무기</div>
+<div class="g2" style="gap:12px;">
+<div class="card" style="border-left:3px solid var(--gold);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">① Tech + Human 결합</div><p class="bt" style="font-size:12px;">테크와 휴먼 케어를 동시에. 맨하탄에 없는 포지션.</p></div>
+<div class="card" style="border-left:3px solid var(--gold);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">② 위치의 전략적 우위</div><p class="bt" style="font-size:12px;">JP Morgan, Google, Bloomberg 도보 5분. 점심 세션이 가능한 유일한 웰니스 공간.</p></div>
+<div class="card" style="border-left:3px solid var(--gold);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">③ K-Wellness 트렌드 파워</div><p class="bt" style="font-size:12px;">TikTok #HeadSpa 수억 뷰. K-뷰티 신뢰도 + NYC 현지화. 트렌드의 파도 위에 있는 타이밍.</p></div>
+<div class="card" style="border-left:3px solid var(--gold);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">④ 결과 중심 언어</div><p class="bt" style="font-size:12px;">기존 스파는 "힐링"을 판다. The Pause는 "결과"를 판다.</p></div>
+<div class="card" style="border-left:3px solid var(--gold);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">⑤ 번들 × 멤버십 × 루틴화</div><p class="bt" style="font-size:12px;">단건 → 번들 → 멤버십 → 루틴화. LTV 극대화 설계.</p></div>
+<div class="card" style="border-left:3px solid var(--sage);"><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:5px;">⑥ 커플 프로그램 독점</div><p class="bt" style="font-size:12px;">체계적 커플 프로그램 운영하는 NYC 웰니스 없음. 기념일·발렌타인 객단가 $480+.</p></div></div></div>
+
+
+</div>
+<div class="sec" style="border-bottom:1px solid var(--border);">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;"><div style="width:3px;height:28px;background:var(--gold);"></div><div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:300;color:var(--ink);">헤드스파 & 페이셜 — NYC 경쟁사 단가</div></div>
+  <div class="g2b" style="margin-bottom:20px;">
+    <div class="cw">
+      <div class="lbl">Head Spa 경쟁사</div>
+      <table class="tbl"><thead><tr><th>업체</th><th>시간</th><th>단가</th><th>특징</th></tr></thead><tbody>
+      <tr><td>Salon Le Ciel (Midtown)</td><td>45분</td><td>$125</td><td>Most Popular</td></tr>
+      <tr><td>Salon Le Ciel (Midtown)</td><td>70분</td><td>$185</td><td>Deep Relaxation</td></tr>
+      <tr><td>Salon Le Ciel (Midtown)</td><td>90분</td><td>$225</td><td>Luxury</td></tr>
+      <tr><td>Allure Day Spa (Midtown)</td><td>75분</td><td>$215</td><td>블로우아웃 미포함</td></tr>
+      <tr><td>SleekCare Spa (Midtown)</td><td>60분</td><td>미공개</td><td>프라이빗 룸</td></tr>
+      <tr style="background:var(--gold4);"><td><strong>The Pause</strong></td><td><strong>50분</strong></td><td><strong>$128</strong></td><td style="color:var(--sage);">파우더룸 별도 · 회전 최적</td></tr>
+      </tbody></table>
+      <div style="margin-top:10px;padding:8px 10px;background:var(--sage2);font-size:11px;color:var(--sage);">경쟁사 45분 $125 대비 50분 $128 — 시간 대비 합리적. 인상 여력 있음.</div>
+    </div>
+    <div class="cw">
+      <div class="lbl">Facial 경쟁사</div>
+      <table class="tbl"><thead><tr><th>업체</th><th>시간</th><th>단가</th><th>특징</th></tr></thead><tbody>
+      <tr><td>Silver Mirror (431 5th Ave)</td><td>50분</td><td>$95~</td><td>도보 3블록 · 직접 경쟁</td></tr>
+      <tr><td>Heyday</td><td>30분</td><td>$99</td><td>체인 · 멤버십 $114</td></tr>
+      <tr><td>Heyday</td><td>50분</td><td>$145</td><td>멤버십 $114</td></tr>
+      <tr><td>Skin Spa NY (Midtown E)</td><td>50분</td><td>$125</td><td>NYC 5곳</td></tr>
+      <tr style="background:rgba(196,87,58,.04);"><td><strong style="color:var(--rose);">주의</strong> Silver Mirror</td><td>50분</td><td>$95+</td><td style="color:var(--rose);">3블록 거리 직접 경쟁</td></tr>
+      <tr style="background:var(--gold4);"><td><strong>The Pause</strong></td><td><strong>45분</strong></td><td><strong>$99</strong></td><td style="color:var(--sage);">시장 최저가권</td></tr>
+      </tbody></table>
+      <div style="margin-top:10px;padding:8px 10px;background:rgba(196,87,58,.06);font-size:11px;color:var(--rose);">Silver Mirror가 3블록 내 직접 경쟁사. 단, 복합 패키지 (Calorie Bar 번들) 포지셔닝으로 차별화. 단독 Facial 가격 $110–120 인상 검토 여지 있음.</div>
+    </div>
+  </div>
+  </div>
+
+</div>
+<div class="chap" id="target"><span class="chap-n">XII</span><div class="chap-line"></div><span class="chap-lbl">Target Customer Profiles</span></div>
+<div class="sec"><h2 class="sec-title">목표 <em>고객 페르소나</em></h2><p class="sec-sub">3개의 핵심 세그먼트 — 각각의 동기, 고통, 그리고 The Pause의 해답</p>
+<div class="g3" style="margin-bottom:24px;">
+<div class="persona pri"><div class="per-badge" style="background:var(--gold);color:white;border-color:var(--gold);">Primary · 핵심</div><div style="font-size:20px;margin-bottom:10px;">💼</div><div class="per-name">The Midtown Pro</div><div class="per-desc">Sarah, 34세 · Finance / Law / Tech<br>연소득 $150K+ · 42nd 근무</div><div style="margin-bottom:12px;"><span class="per-tag">바쁜 스케줄</span><span class="per-tag">효율 중시</span><span class="per-tag">결과 지향</span><span class="per-tag">셀프케어 예산 있음</span></div><div class="per-l">Pain Points</div><div class="per-item"><span class="neg">✗</span>반나절이 없다</div><div class="per-item"><span class="neg">✗</span>만성 피로, 번아웃</div><div class="per-item"><span class="neg">✗</span>운동해도 체형이 안 바뀐다</div><div class="per-l">The Pause Solution</div><div class="per-item"><span class="pos">✓</span>점심 45분 세션</div><div class="per-item"><span class="pos">✓</span>EMS 운동 없이 체형 관리</div><div class="per-item"><span class="pos">✓</span>Devotee 멤버십 주 2회 루틴화</div></div>
+<div class="persona"><div class="per-badge">Secondary · 성장</div><div style="font-size:20px;margin-bottom:10px;">🌿</div><div class="per-name">The Wellness Devotee</div><div class="per-desc">Jessica, 38세 · Creative / Healthcare<br>연소득 $80–120K · UWS/Brooklyn</div><div style="margin-bottom:12px;"><span class="per-tag">요가·필라테스</span><span class="per-tag">SNS 공유형</span><span class="per-tag">K-뷰티 관심</span></div><div class="per-l">Pain Points</div><div class="per-item"><span class="neg">✗</span>새로운 경험을 찾는 중</div><div class="per-item"><span class="neg">✗</span>두피·탈모 고민</div><div class="per-item"><span class="neg">✗</span>기존 스파는 뻔하다</div><div class="per-l">The Pause Solution</div><div class="per-item"><span class="pos">✓</span>The Quiet — Head Spa ASMR 경험</div><div class="per-item"><span class="pos">✓</span>SNS 공유 욕구 충족</div><div class="per-item"><span class="pos">✓</span>Regular 멤버십 뷰티 루틴화</div></div>
+<div class="persona"><div class="per-badge">Tertiary · 기회</div><div style="font-size:20px;margin-bottom:10px;">✈️</div><div class="per-name">The NYC Visitor</div><div class="per-desc">Michael, 42세 · Business Traveler<br>고소득층 · 뉴욕 체류 2–7일</div><div style="margin-bottom:12px;"><span class="per-tag">5th Ave 체험형 소비</span><span class="per-tag">1회 고객단가↑</span></div><div class="per-l">Pain Points</div><div class="per-item"><span class="neg">✗</span>회복 공간이 필요하다</div><div class="per-item"><span class="neg">✗</span>호텔 스파는 비싸고 예약 어렵다</div><div class="per-l">The Pause Solution</div><div class="per-item"><span class="pos">✓</span>The Full Pause — 프리미엄 1회</div><div class="per-item"><span class="pos">✓</span>Gift Card 구매 (귀국 선물)</div><div class="per-item"><span class="pos">✓</span>Google 리뷰 → 입소문</div></div></div>
+<div class="g4"><div class="kpi-card"><div class="kpi-n">Midtown 일일 유동인구</div><div class="kpi-v">500K+</div><div class="kpi-d">42nd & 5th 반경 500m</div></div><div class="kpi-card a"><div class="kpi-n">웰니스 지출 의향</div><div class="kpi-v">~8%</div><div class="kpi-d">= 40,000명 잠재 고객</div></div><div class="kpi-card"><div class="kpi-n">NYC 직장인 연 웰니스 지출</div><div class="kpi-v">$2,400</div><div class="kpi-d">평균</div></div><div class="kpi-card a"><div class="kpi-n">1년 목표 점유율</div><div class="kpi-v">0.5%</div><div class="kpi-d">= 정기 고객 200명</div></div></div></div>
+<div class="chap" id="journey"><span class="chap-n">XIII</span><div class="chap-line"></div><span class="chap-lbl">Customer Journey</span></div>
+<div class="sec"><h2 class="sec-title">고객 여정 <em>맵</em></h2><p class="sec-sub">인지에서 Inner Circle까지 — 5단계 고객 경험 설계</p>
+<div class="arc"><div class="arc-step"><div class="arc-dot"></div><div class="arc-n">Awareness</div><div class="arc-name">처음 알게 된다</div><div class="arc-desc">TikTok · Instagram<br>지인 추천 · PR</div></div><div class="arc-step"><div class="arc-dot on"></div><div class="arc-n">Consideration</div><div class="arc-name">알아보기 시작</div><div class="arc-desc">웹사이트 · 리뷰<br>가격 확인</div></div><div class="arc-step"><div class="arc-dot on"></div><div class="arc-n">First Visit</div><div class="arc-name">직접 경험한다</div><div class="arc-desc">Intro Pass<br>웰컴 세리머니</div></div><div class="arc-step"><div class="arc-dot on"></div><div class="arc-n">Membership</div><div class="arc-name">멤버가 된다</div><div class="arc-desc">72h 전환 오퍼<br>루틴화 시작</div></div><div class="arc-step"><div class="arc-dot"></div><div class="arc-n">Advocacy</div><div class="arc-name">전도사가 된다</div><div class="arc-desc">지인 추천 · UGC<br>Inner Circle</div></div></div>
+<div style="display:flex;flex-direction:column;gap:1px;"><div class="funnel-step"><div class="funnel-stage">Awareness</div><div class="funnel-bar top" style="width:100%;"><div class="funnel-label">인지 — TikTok · Instagram · PR · Word of Mouth</div><div class="funnel-num">100%</div></div></div><div class="funnel-step"><div class="funnel-stage">Consideration</div><div class="funnel-bar" style="width:75%;"><div class="funnel-label">탐색 — 웹사이트 방문, 리뷰 검색</div><div class="funnel-num">75%</div></div></div><div class="funnel-step"><div class="funnel-stage">First Visit</div><div class="funnel-bar" style="width:40%;"><div class="funnel-label">첫 예약 — Intro Pass 또는 단건</div><div class="funnel-num">40%</div></div></div><div class="funnel-step"><div class="funnel-stage">Membership</div><div class="funnel-bar" style="width:25%;background:var(--gold3);"><div class="funnel-label">멤버십 전환 — 72시간 내 오퍼</div><div class="funnel-num" style="color:var(--gold2);">25%</div></div></div><div class="funnel-step"><div class="funnel-stage">Advocacy</div><div class="funnel-bar" style="width:15%;background:#e2ece4;"><div class="funnel-label">추천 · 공유 — Referral Loop</div><div class="funnel-num" style="color:var(--sage);">15%</div></div></div></div></div>
+
+<div class="chap" id="marketing"><span class="chap-n">XIV</span><div class="chap-line"></div><span class="chap-lbl">Service Marketing Strategy</span></div>
+<div class="sec"><h2 class="sec-title">서비스 <em>마케팅 전략</em></h2><p class="sec-sub">4단계 Growth Loop — Awareness → Conversion → Retention → Advocacy</p>
+<div class="g2" style="margin-bottom:24px;">
+<div class="card" style="border-top:3px solid var(--gold);"><div class="lbl">Phase 1 · Awareness</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:8px;">인지 확산</div><div class="al"><div class="al-item"><span class="ar">→</span><span>TikTok Head Spa ASMR — 10만+ 조회 목표</span></div><div class="al-item"><span class="ar">→</span><span>나노 인플루언서 20명 초청 세션</span></div><div class="al-item"><span class="ar">→</span><span>Well+Good, NYPost Style 미디어 피치</span></div><div class="al-item"><span class="ar">→</span><span>Google Business + 로컬 SEO 선점</span></div></div></div>
+<div class="card" style="border-top:3px solid var(--sage);"><div class="lbl">Phase 2 · Conversion</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:8px;">첫 방문 → 멤버십 전환</div><div class="al"><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>Intro Pass $199 / 3회</span></div><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>72시간 내 멤버십 오퍼 (첫 달 20% 할인)</span></div><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>3회 방문 시 멤버십 전환 이메일 자동 발송</span></div></div></div>
+<div class="card" style="border-top:3px solid var(--gold);"><div class="lbl">Phase 3 · Retention</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:8px;">멤버 유지 & 업그레이드</div><div class="al"><div class="al-item"><span class="ar">→</span><span>2주 미방문 SMS: "It's been a while."</span></div><div class="al-item"><span class="ar">→</span><span>생일 무료 Add-on 세션</span></div><div class="al-item"><span class="ar">→</span><span>월 4회 이상 → Executive 업그레이드 제안</span></div></div></div>
+<div class="card" style="border-top:3px solid var(--sage);"><div class="lbl">Phase 4 · Advocacy</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:8px;">추천 & 입소문 설계</div><div class="al"><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>Referral: 양쪽 $30 크레딧</span></div><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>Google 리뷰 $15 크레딧 — 3개월 내 50개 목표</span></div><div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span>Corporate Wellness B2B</span></div></div></div></div>
+<div class="lbl" style="margin-bottom:12px;">서비스별 마케팅 앵글</div>
+<table class="tbl"><thead><tr><th>서비스</th><th>핵심 앵글</th><th>Best Channel</th><th>시즌 트리거</th></tr></thead><tbody>
+<tr><td>The Cleanse</td><td>"Detox what the city put in you" — 과학 수치 활용</td><td>IG 무드샷 + TikTok 스팀 클로즈업</td><td>새해 / 여름 전 / 번아웃 시즌</td></tr>
+<tr><td>The Rebuild</td><td>"30 minutes = 2 hours at the gym" — 시간 효율</td><td>TikTok 결과 영상 + LinkedIn 직장인</td><td>바쁜 직장인 / 운동 시작 실패</td></tr>
+<tr><td>The Quiet</td><td>"TikTok이 열광하는 그 경험" — ASMR 바이럴</td><td>TikTok ASMR (핵심) + IG Reels</td><td>탈모 고민 / 스트레스성 / K-뷰티</td></tr>
+<tr><td>The Reveal</td><td>"Restore what the city takes" — NYC 피부 환경</td><td>IG Before/After + Email 교육</td><td>겨울→봄 / 30대+ 여성</td></tr>
+<tr><td>Couples</td><td>"NYC's most romantic 2 hours" — 경험 선물</td><td>IG 커플 콘텐츠 + Gift Card 캠페인</td><td>발렌타인 / 기념일 / 연말</td></tr>
+</tbody></table></div>
+<div class="chap" id="sns"><span class="chap-n">XV</span><div class="chap-line"></div><span class="chap-lbl">SNS Content Calendar</span></div>
+<div class="sec"><h2 class="sec-title">SNS <em>콘텐츠 캘린더</em></h2><p class="sec-sub">플랫폼 전략 · 콘텐츠 4대 필라 · 8월 Pre-Launch · 9월 Grand Opening</p>
+<div class="g2" style="margin-bottom:28px;">
+<div class="card"><div class="lbl">Instagram 전략</div><div style="font-size:10px;color:var(--gold);margin-bottom:8px;">Feed 4x/주 · Reels 3x/주 · Stories 매일</div><p class="bt" style="font-size:12px;">브랜드 미학의 메인 캔버스. 침묵과 공간감이 느껴지는 비주얼. 무드샷 + 서비스 과정 + Before/After 교차. Stories에서 예약 슬롯 공유 + 인터랙션.</p></div>
+<div class="card"><div class="lbl">TikTok 전략</div><div style="font-size:10px;color:var(--sage);margin-bottom:8px;">5x/주 · 영상 15–60초 · ASMR 핵심</div><p class="bt" style="font-size:12px;">Head Spa ASMR로 바이럴 가능성 최고. 알고리즘 도달 우선. "점심시간 The Pause", "퇴근 후 루틴" 등 직장인 공감 콘텐츠. NYC 맥락 + 진짜 반응이 핵심.</p></div></div>
+<div class="lbl" style="margin-bottom:12px;">콘텐츠 4대 필라</div>
+<div class="g4" style="margin-bottom:32px;">
+<div class="card"><div style="font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Mon · Thu</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:5px;">Education</div><p class="bt" style="font-size:11px;">서비스 과학 원리. 신뢰 구축. 전문성을 드러내되 강의하지 않는다.</p></div>
+<div class="card"><div style="font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Tue · Fri</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:5px;">Transformation</div><p class="bt" style="font-size:11px;">실제 결과, 고객 변화. 구매 전환 유도. 과장 없이 진짜 반응.</p></div>
+<div class="card"><div style="font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Wednesday</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:5px;">Behind The Pause</div><p class="bt" style="font-size:11px;">스페셜리스트 소개, 공간 준비 BTS. 진정성 구축.</p></div>
+<div class="card"><div style="font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Sat · Sun</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:5px;">NYC Lifestyle</div><p class="bt" style="font-size:11px;">도시와 웰니스 교집합. The Pause를 라이프스타일로 확장.</p></div></div>
+
+<div class="lbl" style="margin-bottom:10px;">8월 Pre-Launch 캘린더</div>
+<div class="cal-hd"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+<div class="cal-grid" style="margin-bottom:8px;">
+<div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div>
+<div class="cal-day hl"><div class="cal-n">Aug 1</div><div class="cal-evt evt-sp">🚀 SNS 계정 오픈</div><div class="cal-evt evt-ig">"Something is coming"</div></div>
+<div class="cal-day"><div class="cal-n">2</div><div class="cal-evt evt-tk">공간 티저 영상</div></div>
+<div class="cal-day"><div class="cal-n">3</div><div class="cal-evt evt-ig">카운트다운 시작</div></div>
+<div class="cal-day hl"><div class="cal-n">4</div><div class="cal-evt evt-ig">브랜드명 공개</div><div class="cal-evt evt-sp">Waitlist 랜딩 오픈</div></div>
+<div class="cal-day"><div class="cal-n">5</div><div class="cal-evt evt-tk">"The Pause란?" 15초</div></div>
+<div class="cal-day"><div class="cal-n">6</div><div class="cal-evt evt-ig">공간 무드 Reel</div></div>
+<div class="cal-day"><div class="cal-n">7</div><div class="cal-evt evt-tk">5th Ave 위치 공개</div></div>
+<div class="cal-day"><div class="cal-n">8</div><div class="cal-evt evt-ig">서비스 티저 1 (Cleanse)</div></div>
+<div class="cal-day"><div class="cal-n">9</div><div class="cal-evt evt-ig">인플루언서 협업 발표</div></div>
+<div class="cal-day"><div class="cal-n">10</div><div class="cal-evt evt-tk">원적외선 원리 설명</div></div>
+<div class="cal-day hl"><div class="cal-n">11</div><div class="cal-evt evt-ig">서비스 티저 2 (Quiet)</div></div>
+<div class="cal-day hl"><div class="cal-n">12</div><div class="cal-evt evt-sp">인플루언서 프리뷰 시작</div><div class="cal-evt evt-ig">반응 영상 공개</div></div>
+<div class="cal-day"><div class="cal-n">13</div><div class="cal-evt evt-tk">ASMR 리포스트</div></div>
+<div class="cal-day hl"><div class="cal-n">14</div><div class="cal-evt evt-ig">얼리버드 멤버십 예약 오픈</div></div>
+<div class="cal-day"><div class="cal-n">15</div><div class="cal-evt evt-ig">서비스 티저 3 (Rebuild)</div><div class="cal-evt evt-pr">PR 보도자료 배포</div></div>
+<div class="cal-day"><div class="cal-n">16</div><div class="cal-evt evt-tk">EMS 원리 & 결과</div></div>
+<div class="cal-day"><div class="cal-n">17</div><div class="cal-evt evt-ig">Waitlist 카운트 공유</div></div>
+<div class="cal-day hl"><div class="cal-n">18</div><div class="cal-evt evt-sp">VIP Preview 초청장 발송</div></div>
+<div class="cal-day"><div class="cal-n">19</div><div class="cal-evt evt-tk">서비스 티저 4 (Reveal)</div></div>
+<div class="cal-day"><div class="cal-n">20</div><div class="cal-evt evt-ig">스페셜리스트 소개</div></div>
+<div class="cal-day"><div class="cal-n">21</div><div class="cal-evt evt-tk">팀 소개 BTS</div></div>
+<div class="cal-day hl"><div class="cal-n">22</div><div class="cal-evt evt-ig">멤버십 구조 공개</div></div>
+<div class="cal-day"><div class="cal-n">23</div><div class="cal-evt evt-ig">예약 시스템 오픈 안내</div></div>
+<div class="cal-day"><div class="cal-n">24</div><div class="cal-evt evt-tk">카운트다운 1주</div></div>
+<div class="cal-day hl"><div class="cal-n">25</div><div class="cal-evt evt-sp">VIP Preview Day 1</div><div class="cal-evt evt-ig">라이브 스토리</div></div>
+<div class="cal-day hl"><div class="cal-n">26</div><div class="cal-evt evt-sp">VIP Preview Day 2</div><div class="cal-evt evt-tk">현장 영상</div></div>
+<div class="cal-day"><div class="cal-n">27</div><div class="cal-evt evt-ig">VIP 후기 공유</div></div>
+<div class="cal-day"><div class="cal-n">28</div><div class="cal-evt evt-pr">미디어 커버리지 공유</div></div>
+<div class="cal-day hl"><div class="cal-n">29</div><div class="cal-evt evt-ig">카운트다운 3일</div></div>
+<div class="cal-day hl"><div class="cal-n">30</div><div class="cal-evt evt-ig">카운트다운 2일</div><div class="cal-evt evt-tk">최종 티저</div></div>
+<div class="cal-day hl"><div class="cal-n">31</div><div class="cal-evt evt-ig">내일, The Pause.</div></div>
+</div>
+
+<div class="lbl" style="margin-bottom:10px;margin-top:32px;">9월 Grand Opening 캘린더</div>
+<div class="cal-hd"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+<div class="cal-grid" style="margin-bottom:8px;">
+<div class="cal-day launch"><div class="cal-n">Sep 1</div><div class="cal-evt evt-sp">🎉 GRAND OPEN</div><div class="cal-evt evt-ig">전 채널 오픈 발표</div><div class="cal-evt evt-pr">PR 동시 배포</div></div>
+<div class="cal-day launch"><div class="cal-n">2</div><div class="cal-evt evt-tk">오픈 첫날 현장</div><div class="cal-evt evt-ig">센터 투어 라이브</div></div>
+<div class="cal-day launch"><div class="cal-n">3</div><div class="cal-evt evt-ig">첫 고객 세션 BTS</div><div class="cal-evt evt-tk">Head Spa 풀영상</div></div>
+<div class="cal-day launch"><div class="cal-n">4</div><div class="cal-evt evt-ig">오픈 할인 리마인더</div></div>
+<div class="cal-day launch"><div class="cal-n">5</div><div class="cal-evt evt-ig">The Cleanse 교육</div><div class="cal-evt evt-tk">원적외선 Before/After</div></div>
+<div class="cal-day launch"><div class="cal-n">6</div><div class="cal-evt evt-ig">첫 주 감사 메시지</div><div class="cal-evt evt-sp">Google 리뷰 캠페인</div></div>
+<div class="cal-day launch"><div class="cal-n">7</div><div class="cal-evt evt-tk">첫 주 하이라이트</div></div>
+<div class="cal-day"><div class="cal-n">8</div><div class="cal-evt evt-ig">고객 후기 1호</div></div>
+<div class="cal-day"><div class="cal-n">9</div><div class="cal-evt evt-ig">The Rebuild 교육</div><div class="cal-evt evt-tk">EMS 세션 영상</div></div>
+<div class="cal-day"><div class="cal-n">10</div><div class="cal-evt evt-ig">스페셜리스트 소개</div></div>
+<div class="cal-day"><div class="cal-n">11</div><div class="cal-evt evt-tk">멤버십 소개 영상</div></div>
+<div class="cal-day"><div class="cal-n">12</div><div class="cal-evt evt-ig">The Quiet 무드샷</div></div>
+<div class="cal-day"><div class="cal-n">13</div><div class="cal-evt evt-ig">인플루언서 UGC 리포스트</div></div>
+<div class="cal-day"><div class="cal-n">14</div><div class="cal-evt evt-tk">"NYC 점심시간 루틴"</div></div>
+<div class="cal-day"><div class="cal-n">15</div><div class="cal-evt evt-ig">2주 리뷰 하이라이트</div></div>
+<div class="cal-day"><div class="cal-n">16</div><div class="cal-evt evt-ig">The Reveal 교육</div><div class="cal-evt evt-tk">Facial 과정 영상</div></div>
+<div class="cal-day"><div class="cal-n">17</div><div class="cal-evt evt-ig">고객 Before/After</div></div>
+<div class="cal-day hl"><div class="cal-n">18</div><div class="cal-evt evt-sp">멤버십 정식 오픈</div><div class="cal-evt evt-ig">멤버십 런칭 포스트</div></div>
+<div class="cal-day"><div class="cal-n">19</div><div class="cal-evt evt-tk">멤버십 혜택 설명</div></div>
+<div class="cal-day"><div class="cal-n">20</div><div class="cal-evt evt-ig">커플 프로그램 공개</div></div>
+<div class="cal-day"><div class="cal-n">21</div><div class="cal-evt evt-ig">Sunday Reset 콘텐츠</div></div>
+<div class="cal-day"><div class="cal-n">22</div><div class="cal-evt evt-tk">3주 후기 몽타주</div></div>
+<div class="cal-day"><div class="cal-n">23</div><div class="cal-evt evt-ig">Referral 프로그램</div></div>
+<div class="cal-day"><div class="cal-n">24</div><div class="cal-evt evt-ig">Corporate Wellness B2B</div></div>
+<div class="cal-day"><div class="cal-n">25</div><div class="cal-evt evt-tk">"왜 The Pause인가" 스토리</div></div>
+<div class="cal-day"><div class="cal-n">26</div><div class="cal-evt evt-ig">가을 패키지 예고</div></div>
+<div class="cal-day hl"><div class="cal-n">27</div><div class="cal-evt evt-ig">한 달 감사 콘텐츠</div><div class="cal-evt evt-pr">첫 달 성과 미디어 피치</div></div>
+<div class="cal-day"><div class="cal-n">28</div><div class="cal-evt evt-tk">오픈 한 달 하이라이트</div></div>
+<div class="cal-day"><div class="cal-n">29</div><div class="cal-evt evt-ig">10월 예고 캠페인</div></div>
+<div class="cal-day"><div class="cal-n">30</div><div class="cal-evt evt-ig">September Recap</div></div>
+<div class="cal-day empty"></div>
+</div>
+
+<div style="display:flex;gap:12px;flex-wrap:wrap;font-size:10px;margin-bottom:32px;"><span style="display:flex;align-items:center;gap:5px;color:var(--ink4);"><span style="width:10px;height:10px;background:rgba(184,150,90,.07);border:1px solid var(--borderg);display:inline-block;"></span>Grand Open / Key Milestone</span><span style="display:flex;align-items:center;gap:5px;color:var(--ink4);"><span style="width:10px;height:10px;background:rgba(184,150,90,.1);border:1px solid rgba(184,150,90,.3);display:inline-block;"></span>Instagram</span><span style="display:flex;align-items:center;gap:5px;color:var(--ink4);"><span style="width:10px;height:10px;background:var(--sage2);border:1px solid rgba(107,124,110,.2);display:inline-block;"></span>TikTok</span><span style="display:flex;align-items:center;gap:5px;color:var(--ink4);"><span style="width:10px;height:10px;background:rgba(196,87,58,.08);border:1px solid rgba(196,87,58,.2);display:inline-block;"></span>PR/Milestone</span></div>
+
+<div class="lbl" style="margin-bottom:12px;">해시태그 전략</div>
+<div class="g3" style="margin-bottom:28px;">
+<div class="hashtag-box"><h4>브랜드 오운드</h4><span class="hash-tag">#ThePauseNYC</span><span class="hash-tag">#ThePause</span><span class="hash-tag">#IntentionalRecovery</span><span class="hash-tag">#PauseAndRestore</span><span class="hash-tag">#TheCleanse</span><span class="hash-tag">#TheQuiet</span></div>
+<div class="hashtag-box"><h4>커뮤니티 & 트렌딩</h4><span class="hash-tag">#NYCWellness</span><span class="hash-tag">#HeadSpaASMR</span><span class="hash-tag">#InfraredTherapy</span><span class="hash-tag">#RedLightTherapy</span><span class="hash-tag">#EMSTraining</span><span class="hash-tag">#5thAveNYC</span></div>
+<div class="hashtag-box"><h4>라이프스타일 & 확장</h4><span class="hash-tag">#WellnessRoutine</span><span class="hash-tag">#SelfCareNYC</span><span class="hash-tag">#UrbanWellness</span><span class="hash-tag">#NYCLifestyle</span><span class="hash-tag">#SlowLiving</span><span class="hash-tag">#CouplesWellness</span></div></div>
+
+<div class="lbl" style="margin-bottom:12px;">SNS KPI 목표 — 오픈 후 90일</div>
+<div class="g4"><div class="kpi-card"><div class="kpi-n">Instagram 팔로워</div><div class="kpi-v">2,000+</div><div class="kpi-d">오픈 전 500 → 90일</div></div><div class="kpi-card a"><div class="kpi-n">TikTok 평균 조회</div><div class="kpi-v">10K+</div><div class="kpi-d">Head Spa 타겟 100K</div></div><div class="kpi-card"><div class="kpi-n">IG Engagement Rate</div><div class="kpi-v">5%+</div><div class="kpi-d">업계 평균 1–3% 대비</div></div><div class="kpi-card a"><div class="kpi-n">SNS → 예약 전환</div><div class="kpi-v">15%+</div><div class="kpi-d">링크인바이오 클릭 대비</div></div></div></div>
+
+<div class="chap" id="newmarket"><span class="chap-n">XVI</span><div class="chap-line"></div><span class="chap-lbl">New Market Segments</span></div>
+<div class="sec">
+  <h2 class="sec-title">새로운 <em>타겟 시장</em></h2>
+  <p class="sec-sub">산후조리 케어 & 운동인 리커버리 — 블루오션 포지셔닝 전략</p>
+
+  <!-- ── 산후조리 ── -->
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+    <div style="width:3px;height:36px;background:var(--rose);flex-shrink:0;"></div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:300;color:var(--ink);">산후조리 케어 <em style="font-style:italic;color:var(--rose);font-size:20px;">Postpartum Recovery</em></div>
+      <div style="font-size:11px;color:var(--ink4);">출산 직후 6주–3개월 · 집중 회복기 타겟</div>
+    </div>
+  </div>
+
+  <div class="g2" style="margin-bottom:20px;">
+    <div class="persona" style="border-top:3px solid var(--rose);">
+      <div class="per-badge" style="border-color:rgba(196,87,58,.3);color:var(--rose);">Postpartum Persona</div>
+      <div style="font-size:22px;margin-bottom:8px;">🤱</div>
+      <div class="per-name">The New Mom</div>
+      <div class="per-desc">Emma, 32세 · 출산 후 6–12주<br>이전 직장: Finance / Creative · Midtown 인근 거주</div>
+      <div style="margin-bottom:12px;"><span class="per-tag">극도의 피로</span><span class="per-tag">산후 탈모</span><span class="per-tag">체형 변화</span><span class="per-tag">셀프케어 죄책감</span></div>
+      <div class="per-l">Pain Points</div>
+      <div class="per-item"><span class="neg">✗</span>탈모가 심해졌다 — 감정적으로 가장 힘든 부분</div>
+      <div class="per-item"><span class="neg">✗</span>몸이 예전 같지 않다 (코어, 체형)</div>
+      <div class="per-item"><span class="neg">✗</span>나를 위한 시간에 죄책감을 느낀다</div>
+      <div class="per-item"><span class="neg">✗</span>수면 부족, 만성 피로가 쌓여 있다</div>
+      <div class="per-l">The Pause Solution</div>
+      <div class="per-item"><span class="pos">✓</span>Head Spa — 산후 탈모 케어 + 깊은 이완</div>
+      <div class="per-item"><span class="pos">✓</span>Recovery Pod — 세포 회복, 순환 개선, 피로 해소</div>
+      <div class="per-item"><span class="pos">✓</span>EMS — 출산 후 코어 재건, 체형 회복</div>
+      <div class="per-item"><span class="pos">✓</span>60–75분 세션 — 베이비시터 시간에 딱 맞는 포맷</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="card" style="border-top:3px solid var(--rose);">
+        <div class="lbl">산후조리 선물 패키지 — Gift Set</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="padding-bottom:14px;border-bottom:1px solid var(--border);">
+            <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;">Mama's Pause · 3-Session</div>
+            <div style="font-size:10px;color:var(--ink4);margin-bottom:8px;">Head Spa + Calorie Bar × 3회 · 유효기간 3개월</div>
+            <p class="bt" style="font-size:12px;margin-bottom:8px;">탈모 케어 + 전신 회복. 출산 선물, 임신 중 선구매 모두 가능.</p>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--ink4);">단품 $175×3=$525</span>
+              <span style="font-family:'Playfair Display',serif;font-size:22px;color:var(--rose);">$449</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;">Mama's Pause · 4-Session ⭐</div>
+            <div style="font-size:10px;color:var(--ink4);margin-bottom:8px;">Head Spa + Calorie Bar × 4회 · 유효기간 4개월</div>
+            <p class="bt" style="font-size:12px;margin-bottom:8px;">한 달에 한 번, 4개월 동안. 회복기 전체를 커버하는 선물.</p>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;">
+              <span style="font-size:11px;color:var(--ink4);">단품 $175×4=$700</span>
+              <span style="font-family:'Playfair Display',serif;font-size:22px;color:var(--rose);">$579</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:8px 10px;background:rgba(196,87,58,.06);border:1px solid rgba(196,87,58,.15);font-size:10px;color:var(--rose);">
+          실물 Gift Card 또는 디지털 발송 가능 · 예약은 고객이 원하는 날 직접 선택
+        </div>
+      </div>
+      <div class="card">
+        <div class="lbl">파트너십 기회</div>
+        <div class="al">
+          <div class="al-item"><span class="ar" style="color:var(--rose);">→</span><span>Midtown 인근 산부인과 · 소아과 리퍼럴</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--rose);">→</span><span>NYC 육아 커뮤니티 (Mommy & Me 그룹)</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--rose);">→</span><span>산후조리 선물세트 — 출산 선물 카드</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--rose);">→</span><span>Korean postpartum care 트렌드 미디어 피치</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lbl" style="margin-bottom:12px;">핵심 영문 카피 — Postpartum</div>
+  <div class="g2" style="gap:10px;margin-bottom:40px;">
+    <div class="copy-showcase"><div class="copy-ctx">Instagram / TikTok — Hero Copy</div><div class="copy-line">You just did the hardest thing.<br><em>Now it's your turn.</em></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">Head Spa — Postpartum Hair Loss</div><div class="copy-line">Postpartum hair loss is real.<br><em>So is the recovery.</em><small>The Quiet · Scalp treatment designed for new moms</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">Recovery Pod — Fatigue</div><div class="copy-line">Your body carried everything.<br><em>The Cleanse gives it back.</em><small>30 minutes of infrared recovery. No nap required.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">EMS — Body Recovery</div><div class="copy-line">Your core rebuilt you.<br><em>Now let's rebuild your core.</em><small>The Rebuild · Postnatal EMS recovery</small></div></div>
+  </div>
+
+  <div class="g3" style="margin-bottom:44px;">
+    <div class="card"><div class="lbl">SNS 앵글 · Instagram</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Emotional Storytelling</div><p class="bt" style="font-size:12px;">"엄마도 케어받을 자격 있다"는 메시지. 산후 탈모 Before/After. 죄책감 없는 셀프케어 내러티브.</p></div>
+    <div class="card"><div class="lbl">SNS 앵글 · TikTok</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Education + ASMR</div><p class="bt" style="font-size:12px;">"산후 탈모에 Head Spa가 효과 있는 이유" 교육 콘텐츠. 원적외선 산후 회복 원리. 한국 산후조리 문화 소개.</p></div>
+    <div class="card"><div class="lbl">시즌 & 타이밍</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Always-on + 선물 시즌</div><p class="bt" style="font-size:12px;">출산 선물로 Gift Card 포지셔닝. Mother's Day 집중 캠페인. 임신 중 Pre-booking 유도.</p></div>
+  </div>
+
+  <!-- ── 운동인 리커버리 ── -->
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+    <div style="width:3px;height:36px;background:var(--sage);flex-shrink:0;"></div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:300;color:var(--ink);">운동인 리커버리 <em style="font-style:italic;color:var(--sage);font-size:20px;">Athletic Recovery</em></div>
+      <div style="font-size:11px;color:var(--ink4);">헬스·크로스핏·러닝·사이클링·Equinox 멤버 전체 타겟</div>
+    </div>
+  </div>
+
+  <div class="g3" style="margin-bottom:20px;">
+    <div class="card" style="border-top:3px solid var(--sage);">
+      <div style="font-size:18px;margin-bottom:8px;">🏋️</div>
+      <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:300;color:var(--ink);margin-bottom:3px;">The Gym Goer</div>
+      <div style="font-size:10px;color:var(--ink4);margin-bottom:12px;">CrossFit · 헬스 · 웨이트 · 25–42세</div>
+      <div class="per-item"><span class="neg">✗</span>DOMS — 다음날 운동 못한다</div>
+      <div class="per-item"><span class="neg">✗</span>오버트레이닝, 부상 반복</div>
+      <div class="per-item"><span class="neg">✗</span>근육 회복이 느리다</div>
+      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+        <div class="per-item"><span class="pos">✓</span>Recovery Pod — 염증 감소, 근육 회복</div>
+        <div class="per-item"><span class="pos">✓</span>EMS — 액티브 리커버리 모드</div>
+        <div class="per-item"><span class="pos">✓</span>Oxygen — 퍼포먼스 부스트</div>
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--sage);">
+      <div style="font-size:18px;margin-bottom:8px;">🏃</div>
+      <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:300;color:var(--ink);margin-bottom:3px;">The Endurance Athlete</div>
+      <div style="font-size:10px;color:var(--ink4);margin-bottom:12px;">러너 · 사이클러 · 트라이애슬론 · 28–50세</div>
+      <div class="per-item"><span class="neg">✗</span>장거리 후 극도의 피로 누적</div>
+      <div class="per-item"><span class="neg">✗</span>레이스 전후 회복 프로토콜 필요</div>
+      <div class="per-item"><span class="neg">✗</span>부상 예방, 관절 관리</div>
+      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+        <div class="per-item"><span class="pos">✓</span>Recovery Pod — 전신 회복, 피로 물질 제거</div>
+        <div class="per-item"><span class="pos">✓</span>Oxygen — VO2 max 보조</div>
+        <div class="per-item"><span class="pos">✓</span>NYC Marathon 전후 패키지</div>
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--sage);">
+      <div style="font-size:18px;margin-bottom:8px;">⚡</div>
+      <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:300;color:var(--ink);margin-bottom:3px;">The Fitness Lifestyle</div>
+      <div style="font-size:10px;color:var(--ink4);margin-bottom:12px;">TMPL · SoulCycle · Crunch · NYC 피트니스 라이프스타일</div>
+      <div class="per-item"><span class="neg">✗</span>운동은 하는데 회복이 없다</div>
+      <div class="per-item"><span class="neg">✗</span>체형 변화가 더디다</div>
+      <div class="per-item"><span class="neg">✗</span>웰니스 루틴에 리커버리가 빠져있다</div>
+      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">
+        <div class="per-item"><span class="pos">✓</span>EMS + Recovery Pod 시너지</div>
+        <div class="per-item"><span class="pos">✓</span>TMPL / Mid-City 이후 → The Pause 루틴화</div>
+        <div class="per-item"><span class="pos">✓</span>Essential 멤버십 자연 연결</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2" style="margin-bottom:20px;">
+    <div class="card" style="border-top:3px solid var(--sage);">
+      <div class="lbl">추천 패키지 — Athlete's Pause</div>
+       <div style="display:flex;flex-direction:column;gap:12px;margin-top:6px;">
+         <div style="padding-bottom:12px;border-bottom:1px solid var(--border);">
+           <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;">Executive Reset</div>
+           <div style="font-size:10px;color:var(--ink4);margin-bottom:6px;">Musclender $68 + Calorie Bar $78 + Oxygen free · 70분</div>
+           <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;color:var(--ink4);">면가 $146 · save $21 · 14% off</span><span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--sage);">$125</span></div>
+         </div>
+         <div style="padding-bottom:12px;border-bottom:1px solid var(--border);">
+           <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;">Ultimate Recovery</div>
+           <div style="font-size:10px;color:var(--ink4);margin-bottom:6px;">Calorie Bar $78 + Musclender $68 + Head Spa $128 + Oxygen free · 120분</div>
+           <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;color:var(--ink4);">면가 $274 · save $45 · 16% off</span><span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--sage);">$229</span></div>
+         </div>
+         <div>
+           <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:2px;">Complete Pause 👑</div>
+           <div style="font-size:10px;color:var(--ink4);margin-bottom:6px;">Calorie Bar $78 + Musclender $68 + Head Spa $128 + Facial $99 + Oxygen free · 165분</div>
+           <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-size:11px;color:var(--ink4);">면가 $373 · save $74 · 20% off</span><span style="font-family:'Playfair Display',serif;font-size:20px;color:var(--sage);">$299</span></div>
+         </div>
+       </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="card">
+        <div class="lbl">파트너십 기회 — 42nd 인근 실제 짐</div>
+        <div class="al">
+          <div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span><strong>Mid-City Gym</strong> — 345 W 42nd St, 도보 0분. 1962년부터 운영. 가장 가까운 리퍼럴 파트너.</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span><strong>TMPL Gym</strong> — 49th & Hell's Kitchen + 신규 47th & 3rd Ave. 럭셔리 포지셔닝, The Pause와 브랜드 결이 같음.</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span><strong>CrossFit Hell's Kitchen</strong> — 2025 Best Gym 수상. Midtown 크로스핏 커뮤니티 접근.</span></div>
+          <div class="al-item"><span class="ar" style="color:var(--sage);">→</span><span><strong>NYRR / Nike Run Club NYC</strong> — NYC Marathon 시즌 러너 타겟. 11월 전후 집중.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="lbl">핵심 포지셔닝 메시지</div>
+        <div style="background:var(--sage2);padding:14px;margin-top:4px;">
+          <p style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);line-height:1.6;">"Rest is not the opposite of performance.<br>It's <span style="color:var(--sage);">part of it.</span>"</p>
+        </div>
+        <p class="bt" style="font-size:12px;margin-top:10px;">운동인에게 "쉰다"는 말은 금기. <strong>리커버리를 훈련의 일부</strong>로 포지셔닝하는 것이 핵심.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lbl" style="margin-bottom:12px;">핵심 영문 카피 — Athletic Recovery</div>
+  <div class="g2" style="gap:10px;margin-bottom:28px;">
+    <div class="copy-showcase"><div class="copy-ctx">Brand Statement — Athletic</div><div class="copy-line">Train harder.<br><em>Recover smarter.</em><small>The Pause — built for people who don't stop.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">Recovery Pod — Post-Workout</div><div class="copy-line">You broke it down in the gym.<br><em>We build it back.</em><small>Infrared recovery. 30 minutes. Back in the game.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">EMS — Active Recovery</div><div class="copy-line">Rest day? No.<br><em>Recovery day.</em><small>The Rebuild — active recovery that keeps the work going.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">NYC Marathon Season</div><div class="copy-line">You've trained for 26.2.<br><em>The last mile is recovery.</em><small>Pre & post-race protocol at The Pause.</small></div></div>
+  </div>
+
+  <div class="g3">
+    <div class="card"><div class="lbl">SNS 앵글 · TikTok</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Performance Education</div><p class="bt" style="font-size:12px;">"운동 후 원적외선을 쓰면 생기는 일" 교육 영상. DOMS 회복 속도 Before/After. "진짜 리커버리 루틴" 시리즈.</p></div>
+    <div class="card"><div class="lbl">SNS 앵글 · Instagram</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Lifestyle Integration</div><p class="bt" style="font-size:12px;">TMPL·SoulCycle 후 → The Pause 루틴 콘텐츠. 피트니스 인플루언서 체험 리뷰. "나의 리커버리 루틴" UGC 캠페인.</p></div>
+    <div class="card"><div class="lbl">시즌 캘린더</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Event-driven</div><p class="bt" style="font-size:12px;">NYC Marathon 10–11월 집중. 새해 운동 시즌 1–2월. 여름 바디 시즌 4–5월. Mid-City · TMPL 파트너십 연중.</p></div>
+  </div>
+</div>
+
+
+<div class="chap" id="seasonal"><span class="chap-n">XVII</span><div class="chap-line"></div><span class="chap-lbl">Seasonal & Holiday Marketing</span></div>
+<div class="sec">
+  <h2 class="sec-title">계절 & 홀리데이 <em>마케팅 전략</em></h2>
+  <p class="sec-sub">NYC 12개월 마케팅 캘린더 — 시즌별 포지셔닝 · 홀리데이 캠페인 · 서비스 스포트라이트</p>
+
+  <!-- OVERVIEW STRIP -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:32px;">
+    <div style="background:var(--ink);padding:20px 18px;"><div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;">Winter · Dec–Feb</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:white;margin-bottom:6px;">Reset & Restore</div><p style="font-size:11px;color:rgba(255,255,255,.45);line-height:1.6;">건조한 피부, 연말 피로, 새해 결심. Recovery + Skin 집중.</p></div>
+    <div style="background:var(--bg2);padding:20px 18px;"><div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Spring · Mar–May</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:6px;">Renew & Reveal</div><p style="font-size:11px;color:var(--ink4);line-height:1.6;">피부 재생, 여름 바디 준비. Facial + EMS 집중.</p></div>
+    <div style="background:white;padding:20px 18px;"><div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Summer · Jun–Aug</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:6px;">Recover & Glow</div><p style="font-size:11px;color:var(--ink4);line-height:1.6;">더위 해소, 자외선 피부 회복. Pod + Skin 집중.</p></div>
+    <div style="background:var(--bg2);padding:20px 18px;"><div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Fall · Sep–Nov</div><div style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ink);margin-bottom:6px;">Perform & Prep</div><p style="font-size:11px;color:var(--ink4);line-height:1.6;">NYC Marathon, 루틴 복귀, 홀리데이 시즌 준비.</p></div>
+  </div>
+
+  <!-- FALL (오픈 시즌) -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><div style="width:3px;height:32px;background:var(--gold);flex-shrink:0;"></div><div><div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:300;color:var(--ink);">🍂 Fall <span style="font-size:14px;font-style:italic;color:var(--gold);">Sep – Nov · Grand Opening Season</span></div></div></div>
+  <div class="g3" style="margin-bottom:12px;">
+    <div class="card" style="border-top:2px solid var(--gold);"><div class="lbl">September · Grand Opening</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Back to Routine</div><p class="bt" style="font-size:12px;">여름 휴가 후 NYC 복귀. "도시로 돌아온 당신, 몸도 리셋할 시간." Intro Pass 집중 프로모션. Grand Opening 에너지 극대화.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">서비스 스포트라이트 → Recovery Pod + Head Spa</div></div>
+    <div class="card" style="border-top:2px solid var(--gold);"><div class="lbl">October · Peak Season</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Pre-Marathon Recovery</div><p class="bt" style="font-size:12px;">NYC Marathon 준비 러너 타겟. "레이스 전 마지막 리커버리." Recovery Pod + Oxygen 패키지 푸시. 멤버십 전환 황금기.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">서비스 스포트라이트 → Executive Reset · Ultimate Recovery</div></div>
+    <div class="card" style="border-top:2px solid var(--gold);"><div class="lbl">November · Marathon Month</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Post-Race Recovery + Holiday Prep</div><p class="bt" style="font-size:12px;">마라톤 직후 회복 수요 폭발. 홀리데이 Gift Card 사전 판매 시작. Thanksgiving 전 "리셋" 캠페인.</p><div style="margin-top:10px;font-size:10px;color:var(--gold);">서비스 스포트라이트 → Executive Reset · Gift Card</div></div>
+  </div>
+  <div class="g2" style="margin-bottom:32px;">
+    <div class="copy-showcase"><div class="copy-ctx">October · Marathon Copy</div><div class="copy-line">26.2 miles of effort.<br><em>One hour to recover it all.</em><small>Ultimate Recovery — pre & post race protocol</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">November · Holiday Gift Card</div><div class="copy-line">The best gift isn't a thing.<br><em>It's an hour of nothing.</em><small>The Pause Gift Card — from $59</small></div></div>
+  </div>
+
+  <!-- WINTER -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><div style="width:3px;height:32px;background:#6b89a0;flex-shrink:0;"></div><div><div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:300;color:var(--ink);">❄️ Winter <span style="font-size:14px;font-style:italic;color:#6b89a0;">Dec – Feb · Peak Revenue Season</span></div></div></div>
+  <div class="g3" style="margin-bottom:12px;">
+    <div class="card" style="border-top:2px solid #6b89a0;"><div class="lbl">December · Holiday Season</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Gift of Pause</div><p class="bt" style="font-size:12px;">Gift Card 매출 피크. 연말 파티 전 Facial 수요. 홀리데이 스킨케어 루틴. "완벽한 선물은 쉬는 시간" 캠페인. 번들 Gift Set 출시.</p><div style="margin-top:10px;font-size:10px;color:#6b89a0;">서비스 스포트라이트 → The Reveal · Gift Card</div></div>
+    <div class="card" style="border-top:2px solid var(--rose);"><div class="lbl">January · New Year</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">New Year, New Recovery</div><p class="bt" style="font-size:12px;">연중 가장 큰 멤버십 전환 기회. "올해는 리커버리도 루틴으로." Intro Pass → 멤버십 전환 집중 캠페인. EMS 체형 관리 수요 폭발.</p><div style="margin-top:10px;font-size:10px;color:var(--rose);">서비스 스포트라이트 → EMS · 멤버십 전환</div></div>
+    <div class="card" style="border-top:2px solid var(--rose);"><div class="lbl">February · Valentine's Day</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">The Pause for Two</div><p class="bt" style="font-size:12px;">커플 프로그램 연중 최고 수요. 2주 전부터 예약 오픈. The Pause Date / Full Pause for Two 집중. 커플 Gift Card 한정 디자인.</p><div style="margin-top:10px;font-size:10px;color:var(--rose);">서비스 스포트라이트 → 전 커플 패키지</div></div>
+  </div>
+  <div class="g2" style="margin-bottom:12px;">
+    <div class="copy-showcase"><div class="copy-ctx">January · New Year Campaign</div><div class="copy-line">New year. Same city.<br><em>New recovery ritual.</em><small>Start 2026 with The Pause Membership.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">February · Valentine's Day</div><div class="copy-line">Dinner is easy.<br><em>This is more intimate.</em><small>The Pause for Two — book before Feb 10</small></div></div>
+  </div>
+  <div class="card-g" style="margin-bottom:32px;">
+    <div class="lbl">❄️ Winter 홀리데이 캠페인 타임라인</div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-top:10px;">
+      <div style="display:flex;gap:0;align-items:stretch;border-bottom:1px solid var(--borderg);padding:10px 0;"><div style="width:110px;flex-shrink:0;font-size:10px;color:var(--gold);font-weight:500;">Nov 15</div><div style="font-size:12px;color:var(--ink3);">Holiday Gift Card 판매 오픈 + SNS 캠페인 시작</div></div>
+      <div style="display:flex;gap:0;align-items:stretch;border-bottom:1px solid var(--borderg);padding:10px 0;"><div style="width:110px;flex-shrink:0;font-size:10px;color:var(--gold);font-weight:500;">Dec 1–24</div><div style="font-size:12px;color:var(--ink3);">Holiday Glow 캠페인 — Facial 집중. "파티 전 더 빛나게."</div></div>
+      <div style="display:flex;gap:0;align-items:stretch;border-bottom:1px solid var(--borderg);padding:10px 0;"><div style="width:110px;flex-shrink:0;font-size:10px;color:var(--gold);font-weight:500;">Jan 1–15</div><div style="font-size:12px;color:var(--ink3);">New Year 멤버십 특가 — 첫 달 20% 할인. 가장 큰 전환 윈도우.</div></div>
+      <div style="display:flex;gap:0;align-items:stretch;border-bottom:1px solid var(--borderg);padding:10px 0;"><div style="width:110px;flex-shrink:0;font-size:10px;color:var(--gold);font-weight:500;">Feb 1–14</div><div style="font-size:12px;color:var(--ink3);">Valentine's 커플 패키지 집중. 예약 2주 전 오픈 필수.</div></div>
+      <div style="display:flex;gap:0;align-items:stretch;padding:10px 0;"><div style="width:110px;flex-shrink:0;font-size:10px;color:var(--gold);font-weight:500;">Feb 15–28</div><div style="font-size:12px;color:var(--ink3);">"Post-Valentine Reset" — 커플 멤버십 전환 오퍼.</div></div>
+    </div>
+  </div>
+
+  <!-- SPRING -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><div style="width:3px;height:32px;background:var(--sage);flex-shrink:0;"></div><div><div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:300;color:var(--ink);">🌸 Spring <span style="font-size:14px;font-style:italic;color:var(--sage);">Mar – May · Body & Skin Season</span></div></div></div>
+  <div class="g3" style="margin-bottom:12px;">
+    <div class="card" style="border-top:2px solid var(--sage);"><div class="lbl">March · Spring Reset</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Skin Renewal</div><p class="bt" style="font-size:12px;">겨울 피부 재생. 피부 교체기 Facial 수요. 새 시즌 바디 루틴 시작. "겨울이 남긴 것을 걷어내는 시간."</p><div style="margin-top:10px;font-size:10px;color:var(--sage);">서비스 스포트라이트 → The Reveal · Glow Reset</div></div>
+    <div class="card" style="border-top:2px solid var(--rose);"><div class="lbl">May · Mother's Day</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">For Every Mom</div><p class="bt" style="font-size:12px;">산후조리 타겟 + 일반 선물 수요. "엄마에게 줄 수 있는 가장 좋은 선물." Mama's Pause 패키지 집중. Gift Card 2위 피크 시즌.</p><div style="margin-top:10px;font-size:10px;color:var(--rose);">서비스 스포트라이트 → Mama's Pause · Gift Card</div></div>
+    <div class="card" style="border-top:2px solid var(--sage);"><div class="lbl">Apr–May · Summer Body Prep</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Pre-Summer EMS</div><p class="bt" style="font-size:12px;">"여름이 오기 전 8주." EMS 체형 관리 수요 급증. EMS 5회 패키지 집중 프로모션. Before/After 콘텐츠 시즌.</p><div style="margin-top:10px;font-size:10px;color:var(--sage);">서비스 스포트라이트 → EMS · Executive Reset</div></div>
+  </div>
+  <div class="g2" style="margin-bottom:32px;">
+    <div class="copy-showcase"><div class="copy-ctx">May · Mother's Day</div><div class="copy-line">She did everything for everyone.<br><em>This one's for her.</em><small>The Mama's Pause — Mother's Day Gift Card</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">April · Pre-Summer EMS</div><div class="copy-line">8 weeks to summer.<br><em>Start with 30 minutes.</em><small>The Rebuild — EMS body sculpting</small></div></div>
+  </div>
+
+  <!-- SUMMER -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><div style="width:3px;height:32px;background:#c4914a;flex-shrink:0;"></div><div><div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:300;color:var(--ink);">☀️ Summer <span style="font-size:14px;font-style:italic;color:#c4914a;">Jun – Aug · Recovery & Glow</span></div></div></div>
+  <div class="g3" style="margin-bottom:12px;">
+    <div class="card" style="border-top:2px solid #c4914a;"><div class="lbl">June · Summer Kick-off</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">City Heat Detox</div><p class="bt" style="font-size:12px;">NYC 도심 열기 + 자외선 피부 데미지. "도시의 열기는 다르게 쐬어야 한다." Recovery Pod의 열 vs 도시의 열. 차별화 메시지 기회.</p><div style="margin-top:10px;font-size:10px;color:#c4914a;">서비스 스포트라이트 → Recovery Pod · The Reveal</div></div>
+    <div class="card" style="border-top:2px solid #c4914a;"><div class="lbl">July · Mid-Summer</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Urban Athlete Recovery</div><p class="bt" style="font-size:12px;">여름 운동인 피로 집중 타겟. 센트럴파크 러너, 야외 운동족. "밖에서 쌓인 것을 안에서 푸는 시간." Executive Reset 패키지.</p><div style="margin-top:10px;font-size:10px;color:#c4914a;">서비스 스포트라이트 → Executive Reset · Oxygen</div></div>
+    <div class="card" style="border-top:2px solid #c4914a;"><div class="lbl">August · Pre-Launch / 1주년</div><div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);margin-bottom:6px;">Fall Season Prep</div><p class="bt" style="font-size:12px;">9월 가을 시즌 복귀 예열. 1주년 Anniversary 캠페인 (2026). 얼리버드 멤버십 오퍼. 인플루언서 초청 리부트.</p><div style="margin-top:10px;font-size:10px;color:#c4914a;">서비스 스포트라이트 → 전 서비스 하이라이트</div></div>
+  </div>
+  <div class="g2" style="margin-bottom:32px;">
+    <div class="copy-showcase"><div class="copy-ctx">June · Summer Heat Copy</div><div class="copy-line">The city burns.<br><em>We burn differently.</em><small>The Cleanse — intentional heat. 30 minutes.</small></div></div>
+    <div class="copy-showcase"><div class="copy-ctx">July · Runner Recovery</div><div class="copy-line">Central Park at 6am.<br><em>The Pause at noon.</em><small>Executive Reset — $125 · back in the game by 1pm</small></div></div>
+  </div>
+
+  <!-- HOLIDAY MASTER CALENDAR -->
+  <div class="lbl" style="margin-bottom:14px;">NYC 주요 홀리데이 캠페인 마스터 캘린더</div>
+  <table class="tbl">
+    <thead><tr><th>날짜</th><th>홀리데이 / 이벤트</th><th>캠페인 포인트</th><th>주력 서비스</th><th>예상 객단가</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 1</td><td>New Year's Day</td><td>"New Year, New Recovery" 멤버십 특가</td><td>멤버십 전환 + EMS</td><td>$149–$249/멤버십</td></tr>
+      <tr><td>Feb 14</td><td>Valentine's Day ❤️</td><td>커플 패키지 연중 최대 수요</td><td>전 커플 패키지</td><td>$189–$890</td></tr>
+      <tr><td>Mar (둘째 주)</td><td>Spring Break</td><td>관광객 + NYC 방문객 타겟</td><td>The Full Pause 1회</td><td>$249+</td></tr>
+      <tr><td>May (둘째 일요일)</td><td>Mother's Day 🌸</td><td>산후조리 + 선물 Gift Card 피크</td><td>Mama's Pause + Gift Card</td><td>$189 / $100–$300</td></tr>
+      <tr><td>Jun (셋째 일요일)</td><td>Father's Day</td><td>남성 리커버리 타겟. "아빠에게도 Pause."</td><td>Executive Reset + Essential Reset</td><td>$139–$199</td></tr>
+      <tr><td>Sep 1</td><td>Labor Day / 오픈 1주년</td><td>Anniversary + 가을 시즌 복귀</td><td>Intro Pass 재오픈 특가</td><td>$199</td></tr>
+      <tr><td>Oct–Nov</td><td>NYC Marathon 🏃</td><td>러너 리커버리 집중 캠페인</td><td>Ultimate Recovery + Executive Reset</td><td>$125–$229</td></tr>
+      <tr><td>Nov (넷째 목)</td><td>Thanksgiving</td><td>"Pause before the feast." 리셋 메시지</td><td>Recovery Pod + Head Spa</td><td>$189</td></tr>
+      <tr><td>Dec 1–24</td><td>Holiday Season 🎁</td><td>Gift Card 최대 피크. "최고의 선물은 쉬는 시간."</td><td>Gift Card + Facial</td><td>$59–$890</td></tr>
+      <tr><td>Dec 31</td><td>New Year's Eve</td><td>"내년은 더 잘 쉴 것." 멤버십 선예약</td><td>멤버십 + 커플 패키지</td><td>$149–$249/멤버십</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SNS SEASONAL -->
+  <div class="lbl" style="margin-bottom:14px;margin-top:32px;">시즌별 SNS 앵글 & 해시태그</div>
+  <div class="g4">
+    <div class="card"><div style="font-size:16px;margin-bottom:6px;">🍂</div><div style="font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Fall</div><div class="hash-tag" style="font-size:10px;">#NYCMarathon</div><div class="hash-tag" style="font-size:10px;">#FallReset</div><div class="hash-tag" style="font-size:10px;">#BackToRoutine</div><div class="hash-tag" style="font-size:10px;">#PostRaceRecovery</div></div>
+    <div class="card"><div style="font-size:16px;margin-bottom:6px;">❄️</div><div style="font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Winter</div><div class="hash-tag" style="font-size:10px;">#HolidayGlow</div><div class="hash-tag" style="font-size:10px;">#NewYearReset</div><div class="hash-tag" style="font-size:10px;">#ValentinesSpa</div><div class="hash-tag" style="font-size:10px;">#GiftOfPause</div></div>
+    <div class="card"><div style="font-size:16px;margin-bottom:6px;">🌸</div><div style="font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Spring</div><div class="hash-tag" style="font-size:10px;">#SpringSkinReset</div><div class="hash-tag" style="font-size:10px;">#SummerBodyPrep</div><div class="hash-tag" style="font-size:10px;">#MothersDay</div><div class="hash-tag" style="font-size:10px;">#MamasPause</div></div>
+    <div class="card"><div style="font-size:16px;margin-bottom:6px;">☀️</div><div style="font-size:10px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;">Summer</div><div class="hash-tag" style="font-size:10px;">#SummerRecovery</div><div class="hash-tag" style="font-size:10px;">#CityHeatDetox</div><div class="hash-tag" style="font-size:10px;">#NYCSummer</div><div class="hash-tag" style="font-size:10px;">#UrbanAthlete</div></div>
+  </div>
+</div>
+<div class="foot"><div class="foot-brand"><em>The</em> Pause.</div><div class="foot-meta">Complete Brand Document v2.0<br>42nd St & 5th Ave · Manhattan · 2025<br>17 Chapters · Brand · Logo · Service · Pricing · Membership · SNS · New Markets · Seasonal</div></div>
+
+</div></body></html>
+<!-- INJECT BEFORE FOOT - seasonal chapter -->
